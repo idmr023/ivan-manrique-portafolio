@@ -3,33 +3,33 @@ import DemoButton from "../Others/DemoButton.astro";
 
 interface Props {
   imgSrc: string;
-  alt: string;
   titulo: string;
   descripcion: string;
   demo: string;
   repositorio: string;
   tecnologias: string[];
-  gradiente : boolean;
+  reverso: boolean;
 }
 
-const { imgSrc, titulo, descripcion, demo, repositorio, tecnologias, alt, gradiente } =
-  Astro.props;
+const { imgSrc, titulo, descripcion, demo, repositorio, tecnologias, reverso } = Astro.props;
 ---
 
-<div class={`flex flex-wrap min-w-72 min-h-36 text-justify p-8 ${gradiente ? 'bg-gradient-to-r from-slate-800 to-cyan-900' : ''}`}>
-  <div class="flex justify-between mb-2">
-    <h2 class="text-2xl mr-2.5">{titulo}</h2>
-    {tecnologias.map((tecnologia: string) => <i class={`${tecnologia} text-xl mx-4`} />)}
-  </div>
-
-  <div>
-    <img src={imgSrc} alt={alt}/>
-    <p class="text-2xl"></p>
-    <p>{descripcion}</p>
+<div class={`flex flex-col md:flex-row ${reverso ? 'md:flex-row-reverse' : ''} items-center bg-gradient-to-br from-slate-800 to-cyan-900 rounded-xl m-6 p-6 shadow-xl`}>
+  <div class="w-full md:w-1/2 p-4">
+    <img src={imgSrc} class="rounded-lg shadow-md w-full"/>
   </div>
   
-  <div class="m-4">
-    <a href={demo}><DemoButton/></a>
-    <a href={repositorio}>GitHub</a>
+  <div class="w-full md:w-1/2 text-white p-4">
+    <h2 class="text-2xl font-bold mb-2">{titulo}</h2>
+    <div class="flex flex-wrap mb-2">
+      {tecnologias.map((tecnologia: string) => (
+        <i class={`${tecnologia} text-xl mx-2`} title={tecnologia}></i>
+      ))}
+    </div>
+    <p class="mb-4">{descripcion}</p>
+    <div class="flex gap-4 items-center">
+      <a href={demo} target="_blank"><DemoButton/></a>
+      <a href={repositorio} target="_blank" class="text-cyan-300 underline hover:text-cyan-500">GitHub</a>
+    </div>
   </div>
 </div>

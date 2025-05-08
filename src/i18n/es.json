@@ -1,13 +1,13 @@
 {
     "WEBPAGE_TITLE": "Portafolio - Ivan Manrique",
 
-    "MENU_A1": "About me",
+    "MENU_A1": "Acerca de mi",
     "MENU_A2": "Conocimientos",
     "MENU_A3": "Formación académica",
     "MENU_A4": "Experiencia profesional",
 
     "HEADER_TITLE" : "Ivan Daniel Manrique Roa",
-    "HEADER_DESCRIPTION" : "<strong>Desarrollador FrontEnd</strong> <br/> Actualmente, estoy cursando el séptimo ciclo de la carrera de Ingeniería de Software. Poseo habilidades para trabajar eficientemente bajo presión, realizando múltiples tareas de manera ágil y en equipo. <br> Debido a que me encanta el aprendizaje continuo, periódicamente me inscribo en cursos relevantes para mejorar mis habilidades y aumentar mi empleabilidad.",
+    "HEADER_DESCRIPTION" : "Apasionado por el análisis de datos y la optimización de procesos. Experiencia en Python, SQL y Tableau para visualizar y analizar datos, mejorando indicadores y tiempos de respuesta en un 25%. En constante aprendizaje, busco aportar valor a través de la analítica y la inteligencia de negocio.",
     "HEADER_IMG_ALT" : "Foto de perfil",
     "HEADER_BADGE_TXT" : "Disponible para trabajar",
     
@@ -28,30 +28,23 @@
     "STUDIES3_STATE" : "Finalizado",
     "STUDIES3_ALT" : "Logo de Alura",
 
-    "CERTIFICATIONS_SUBTITLE1": "Soporte de TI de Google",
-    "CERTIFICATIONS_DESCRIPTION1": "Depuración | Computación en la Nube | Protocolos de Red | Técnicas y Algoritmos de Encriptación",
+    "CERTIFICATIONS_TITLE": "Certificaciones",
+    "CERTIFICATIONS_SUBTITLE1": "Data Analyst, Platzi, 2025",
+    "CERTIFICATIONS_DESCRIPTION1": "Limpieza de datos | Python | NumPy | Pandas | Matplotlib | Seaborn | Jupyter Notebook",
     
     "CERTIFICATIONS_SUBTITLE2": "Oracle Next Education Front-end, Alura Latam, 2023",
     "CERTIFICATIONS_DESCRIPTION2": "HTML5 | CSS3 | JavaScript | ReactJS | PHP | MySQL | Git & GitHub | Trello | Figma | Agilidad Empresarial",
-    
-    "CERTIFICATIONS_SUBTITLE3": "Análisis de Datos e Inteligencia de Negocios",
-    "CERTIFICATIONS_DESCRIPTION3": "Microsoft Excel | SQL | Power BI",
-    
-    "CERTIFICATIONS_SUBTITLE4": "Análisis de Datos con Python, Free Code Camp, 2024",
-    "CERTIFICATIONS_DESCRIPTION4": "Limpieza de Datos | Python | NumPy | Pandas | Matplotlib | Seaborn | Jupyter Notebook",
-    
-    "CERTIFICATIONS_SUBTITLE5": "Análisis de Datos de Google",
-    "CERTIFICATIONS_DESCRIPTION5": "Hojas de Cálculo | Tableau | R",    
+        
+    "CERTIFICATIONS_SUBTITLE3": "Análisis de Datos de Google",
+    "CERTIFICATIONS_DESCRIPTION3": "Hojas de Cálculo | Tableau | R",    
 
     "EXP_TITLE" : "Experiencia profesional",
-    "EXP1_TITLE" : "Hotel Antares",
-    "EXP1_DESCRIPTION": "Proyecto en el cual se pueden consultar los clientes y habitaciones, así como editarlos y eliminarlos. Para poder hacer esto el admin debe estar logueado, cada vez que lo haga recibirá un correo de inicio de sesión.",
-    "EXP2_TITLE" : "Banco Chanchito UTP",
-    "EXP2_DESCRIPTION" : "Trata acerca de una página de un banco fictio, donde el cliente puede regsitrarse, iniciar y cerrar sesión. Además, puede crear su tarjeta, su seguro y consultar su estado de cuenta. Toda la página es responsiva.",
-    "EXP3_TITLE" : "Proyecto Libreria",
-    "EXP3_DESCRIPTION" : "El proyecto presenta rutas protegidas, autenticación y registro del usuario, listado de libros desde la base de datos y envío de correos de contacto. Además, usando Stack AI y Botpress cree un ChatBot personalizado para atender las consultas de los clientes.",
+    "EXP1_TITLE" : "Clean and analyze social media usage data with Python",
+    "EXP1_DESCRIPTION" : "Proyecto acerca de analizar los datos de una red social ficticia con el objetivo de conocer insights acerca de la misma. A través de la limpieza y analisis de datos pude darme cuenta de cual fue el año con menor acercamiento a los clientes y un motivo por el que sucedía esto, asimismo una resolución.",
+    "EXP2_TITLE" : "Proyecto Libreria",
+    "EXP2_DESCRIPTION" : "El proyecto presenta rutas protegidas, autenticación y registro del usuario, listado de libros desde la base de datos y envío de correos de contacto. Además, usando Stack AI y Botpress cree un ChatBot personalizado para atender las consultas de los clientes.",
 
-    "FOOTER_TITLE" : "Desarrollado por Ivan Manrique | 2024",
+    "FOOTER_TITLE" : "Desarrollado por Ivan Manrique | 2025",
 
     "SMB_ARIA_LABEL1" : "Más información en mi Linkedin",
     "SMB_ARIA_LABEL2" : "Más información en mi GitHub",

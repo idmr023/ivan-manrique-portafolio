@@ -7,16 +7,20 @@ const i18n = getI18N({ currentLocale})
 
 ---
 
-<Layout title="Portafolio - Inicio">
+<Layout title="Portafolio - Not Found">
     <div>
         <div class="centerer">
-            <img class="porthole" src="https://media.giphy.com/media/3o85xJhackBStfkdBC/giphy.gif" />
+            <img class="porthole" src="https://media.giphy.com/media/3o85xJhackBStfkdBC/giphy.gif" alt="404 GIF"/>
         </div>
         <div class="centerer">
             <h1 class="text one">{i18n.NOTFOUND_404}</h1>
         </div>
         <div class="centerer">
             <h1 class="text two">{i18n.NOTFOUND_404}</h1>
+        </div>
+        <!-- Botón de Volver, centrado en la parte inferior -->
+        <div class="bottom-button">
+            <a href="/" class="bg-cyan-500 text-white p-4 rounded-md">Back to Home</a>
         </div>
     </div>
 </Layout>
@@ -59,7 +63,7 @@ body {
 	font-size: 6vw;
 	text-transform: uppercase;
 	letter-spacing: 1vw;
-	color: transparent;
+	color: #0891b2; /* Mejor contraste */
     width: 100%;
 	text-align: center;
 	mix-blend-mode: screen;
@@ -79,16 +83,16 @@ body {
 		transform: scale(1) translate(0, 0) skew(0deg);
 	}
 	7% {
-		transform:  scale(1) translate(0, 0) skew(0deg);
+		transform: scale(1) translate(0, 0) skew(0deg);
 	}
 	8% { 
-		transform:  scale(1.2) translate(-20px, 30px) skew(0deg);
+		transform: scale(1.2) translate(-20px, 30px) skew(0deg);
 	}
 	11% { 
-		transform:  scale(1.2) translate(-20px, 30px) skew(0deg);
+		transform: scale(1.2) translate(-20px, 30px) skew(0deg);
 	}
 	12% {
-		transform:  scale(0) translate(0,0) skew(0deg);
+		transform: scale(0) translate(0,0) skew(0deg);
 	}
 	29% { 
 		transform: skew(-50deg);
@@ -100,19 +104,28 @@ body {
 		transform: skew(0deg);
 	}
 	67% {
-		transform:  scale(1) translate(0, 0) skew(0deg);
+		transform: scale(1) translate(0, 0) skew(0deg);
 	}
 	68% { 
-		transform:  scale(1.2) translate(50px, 35px) skew(0deg);
+		transform: scale(1.2) translate(50px, 35px) skew(0deg);
 	}
 	71% { 
-		transform:  scale(1.2) translate(50px, 35px) skew(0deg);
+		transform: scale(1.2) translate(50px, 35px) skew(0deg);
 	}
 	72% {
-		transform:  scale(0) translate(0,0) skew(0deg);
+		transform: scale(0) translate(0,0) skew(0deg);
 	}
 	100% {
 		transform: skew(0deg);
 	}
+}
+
+.bottom-button {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    text-align: center;
 }
 </style>

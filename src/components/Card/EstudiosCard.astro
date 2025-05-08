@@ -1,16 +1,16 @@
 ---
 interface Props {
-    imgSrc: string;
-    titulo: string;
-    estado: string;
-    alt: string;
+  imgSrc: string;
+  titulo: string;
+  estado: string;
+  alt: string;
 }
 
-const { imgSrc, titulo, estado, alt} = Astro.props;
+const { imgSrc, titulo, estado, alt } = Astro.props;
 ---
 
-<div class="text-center w-28 m-7">
-    <img src={imgSrc} alt={alt}/>
-    <h2 class="text-white">{titulo}</h2>
-    <p>{estado}</p>
+<div class="bg-gradient-to-br from-cyan-700 to-blue-800 p-8 rounded-2xl shadow-xl text-white w-full max-w-xl m-5 mx-auto flex flex-col items-center hover:scale-105 transition-transform duration-200">
+  <i class={`${imgSrc} text-5xl mb-4`} aria-hidden="true" title={alt}></i>
+  <h2 class="text-2xl font-bold mb-2">{titulo}</h2>
+  <p class="text-lg text-cyan-100 italic">{estado}</p>
 </div>
