@@ -14,7 +14,7 @@ interface Props {
 const { imgSrc, titulo, descripcion, demo, repositorio, tecnologias, reverso } = Astro.props;
 ---
 
-<div class={`flex flex-col md:flex-row ${reverso ? 'md:flex-row-reverse' : ''} items-center bg-gradient-to-br from-slate-800 to-cyan-900 rounded-xl m-6 p-6 shadow-xl`}>
+<div class={`w-full max-w-5xl mx-auto flex flex-col md:flex-row ${reverso ? 'md:flex-row-reverse' : ''} items-center bg-gradient-to-br from-slate-800 to-cyan-900 rounded-xl m-6 p-6 shadow-xl`}>
   <div class="w-full md:w-1/2 p-4">
     <img src={imgSrc} class="rounded-lg shadow-md w-full"/>
   </div>
@@ -27,7 +27,7 @@ const { imgSrc, titulo, descripcion, demo, repositorio, tecnologias, reverso } =
       ))}
     </div>
     <p class="mb-4">{descripcion}</p>
-    <div class="flex gap-4 items-center">
+    <div class="flex gap-4 items-center flex-wrap">
       <a href={demo} target="_blank"><DemoButton/></a>
       <a href={repositorio} target="_blank" class="text-cyan-300 underline hover:text-cyan-500">GitHub</a>
     </div>
