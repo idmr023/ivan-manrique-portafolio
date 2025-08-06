@@ -42,7 +42,7 @@
     "EXP1_TITLE" : "Clean and Analyze Social Media Usage Data with Python",
     "EXP1_DESCRIPTION" : "A project analyzing the data from a fictitious social media platform to gain insights. Through data cleaning and analysis, I identified the year with the least customer engagement and the reasons behind it, along with a solution.",
     "EXP2_TITLE" : "Library Project",
-    "EXP2_DESCRIPTION" : "The project includes protected routes, user authentication and registration, book listing from the database, and contact email sending. Additionally, using Stack AI and Botpress, I created a custom chatbot to address customer inquiries.",
+    "EXP2_DESCRIPTION" : "The project includes protected routes, user authentication and registration, services listing from the database, and contact email sending. Is currently in development and I'm searching for any usuful feature to add.",
 
     "FOOTER_TITLE" : "Developed by Ivan Manrique | 2025",
 
