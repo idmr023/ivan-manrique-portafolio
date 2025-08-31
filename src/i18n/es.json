@@ -41,12 +41,14 @@
     "EXP_TITLE" : "Experiencia profesional",
     "EXP1_TITLE" : "Limpieza y análisis del uso de las redes sociales con Python",
     "EXP1_DESCRIPTION" : "Proyecto acerca de analizar los datos de una red social con el objetivo de conocer insights acerca de la misma. A través de la limpieza y analisis de datos pude darme cuenta de cual fue el año con menor acercamiento a los clientes y un motivo por el que sucedía esto, asimismo una resolución.",
-    "EXP2_TITLE" : "Proyecto Estudio Jurídico",
+    "EXP2_TITLE" : "Estudio Jurídico",
     "EXP2_DESCRIPTION" : "El proyecto presenta rutas protegidas, autenticación y registro del usuario, listado de servicios desde la base de datos y envío de correos de contacto. Actualmente se encuentra en desarrollo y me encuentro en la búsqueda de funcionalidades para implementar.",
     "EXP3_TITLE" : "Asteroids",
     "EXP3_DESCRIPTION" : "Este proyecto, creado con JS y Phaser, es un juego clásico 2D similar a Space Invaders, pero con la característica añadida de ser controlado por voz.",
-
-
+    "EXP4_TITLE" : "Hotel Antares",
+    "EXP4_DESCRIPTION" : "Proyecto desarrollado en Java utilizando JSP y JSF. Incluye un sistema de inicio de sesión funcional, registro de habitaciones y gestión de clientes, así como todas las funcionalidades necesarias para que los administradores del hotel puedan gestionar sus operaciones de manera eficiente.",
+    "EXP5_TITLE" : "Videojuego 3D Unity",
+    "EXP5_DESCRIPTION" : "Desarrollo de un videojuego en Unity, incluyendo la creación de sprites, integración de assets, modelado de terrenos con la herramienta Terrain, implementación de colisiones y motor de juego funcional. El vehículo dentro del juego es completamente operativo y se controla mediante teclas de dirección.",
 
     "FOOTER_TITLE" : "Desarrollado por Ivan Manrique | 2025",
 
