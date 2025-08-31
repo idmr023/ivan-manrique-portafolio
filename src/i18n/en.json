@@ -48,7 +48,7 @@
     "EXP4_TITLE": "Hotel Antares",
     "EXP4_DESCRIPTION": "Project developed in Java using JSP and JSF. Includes a functional login system, room registration, and customer management, as well as all the necessary features for hotel administrators to efficiently manage their operations.",
     "EXP5_TITLE": "3D Unity Video Game",
-    "EXP5_DESCRIPTION": "Development of a video game in Unity, including sprite creation, asset integration, terrain modeling with the Terrain tool, collision implementation, and a fully functional game engine. The in-game vehicle is fully operational and controlled using arrow keys."
+    "EXP5_DESCRIPTION": "Development of a video game in Unity, including sprite creation, asset integration, terrain modeling with the Terrain tool, collision implementation, and a fully functional game engine. The in-game vehicle is fully operational and controlled using arrow keys.",
 
     
     "FOOTER_TITLE" : "Developed by Ivan Manrique | 2025",
