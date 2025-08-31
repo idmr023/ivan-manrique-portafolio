@@ -43,6 +43,10 @@
     "EXP1_DESCRIPTION" : "Proyecto acerca de analizar los datos de una red social con el objetivo de conocer insights acerca de la misma. A través de la limpieza y analisis de datos pude darme cuenta de cual fue el año con menor acercamiento a los clientes y un motivo por el que sucedía esto, asimismo una resolución.",
     "EXP2_TITLE" : "Proyecto Estudio Jurídico",
     "EXP2_DESCRIPTION" : "El proyecto presenta rutas protegidas, autenticación y registro del usuario, listado de servicios desde la base de datos y envío de correos de contacto. Actualmente se encuentra en desarrollo y me encuentro en la búsqueda de funcionalidades para implementar.",
+    "EXP3_TITLE" : "Asteroids",
+    "EXP3_DESCRIPTION" : "Este proyecto, creado con JS y Phaser, es un juego clásico 2D similar a Space Invaders, pero con la característica añadida de ser controlado por voz.",
+
+
 
     "FOOTER_TITLE" : "Desarrollado por Ivan Manrique | 2025",
 
