@@ -1,12 +1,12 @@
 # build output
 dist/
+.vercel/
 
 # generated types
 .astro/
 
 # dependencies
 node_modules/
-!.vercel/output/functions/_render.func/node_modules/
 
 # logs
 npm-debug.log*
