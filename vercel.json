@@ -1,0 +1,7 @@
+{
+  "functions": {
+    "_render.func/**/*.mjs": {
+      "runtime": "nodejs20.x"
+    }
+  }
+}

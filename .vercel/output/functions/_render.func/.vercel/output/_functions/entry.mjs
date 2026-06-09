@@ -1,6 +1,6 @@
 import { renderers } from './renderers.mjs';
-import { c as createExports } from './chunks/entrypoint_1pRPjvTj.mjs';
-import { manifest } from './manifest_BzK_na4-.mjs';
+import { c as createExports } from './chunks/entrypoint_KmYqKP9U.mjs';
+import { manifest } from './manifest_D9u5HG5r.mjs';
 
 const _page0 = () => import('./pages/_image.astro.mjs');
 const _page1 = () => import('./pages/404.astro.mjs');
@@ -23,7 +23,8 @@ const _manifest = Object.assign(manifest, {
     middleware: () => import('./_noop-middleware.mjs')
 });
 const _args = {
-    "middlewareSecret": "e72a6363-2751-4fe3-9075-2766b610b1ea"
+    "middlewareSecret": "d86065d0-510f-4cb8-bd70-a3950fabb577",
+    "skewProtection": false
 };
 const _exports = createExports(_manifest, _args);
 const __astrojsSsrVirtualEntry = _exports.default;
