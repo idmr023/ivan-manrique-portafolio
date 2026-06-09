@@ -1,0 +1,244 @@
+import { useState, useRef, useEffect } from 'react';
+
+interface Message {
+  role: 'bot' | 'user';
+  text: string;
+}
+
+interface ChatbotProps {
+  i18n: Record<string, string>;
+  locale: string;
+}
+
+const RESPONSES: Record<string, Record<string, string[]>> = {
+  pt: {
+    experiencia: [
+      'Ivan atuou na Ripnel desenvolvendo um ERP do zero com React, Next.js e Supabase, otimizando processos em 30% com automação e IA Generativa.',
+      'Na Teleperformance, foi promovido a Tier 4 Trilíngue, liderou equipes e implementou dashboards em Tableau que reduziram em 40% o tempo de geração de relatórios.',
+      'Ele tem experiência prática tanto em desenvolvimento frontend quanto em análise de dados, construindo desde interfaces até dashboards de métricas.',
+    ],
+    habilidades: [
+      'Frontend: React, Next.js, TypeScript, Tailwind CSS, Astro, HTML5, CSS3, JavaScript.',
+      'Data & IA: Python, SQL, Tableau, Power BI, Pandas, NumPy, Jupyter, IA Generativa.',
+      'Soft Skills: Liderança, Inteligência Emocional, Resolução de Problemas, Comunicação Trilíngue (ES/EN/PT), Metodologias Ágeis.',
+    ],
+    formacao: [
+      'Ivan cursa Engenharia de Software na UTP, integra o Tercio Superior e participa do programa de talentos diretivos Impulsa UTP.',
+      'Possui certificações do Google (Data Analysis), Oracle (Next Education Front-End) e Platzi (Data Analyst).',
+    ],
+    projetos: [
+      'ERP Ripnel: Redução de 30% no tempo operacional e 45% no tempo de resposta ao cliente com chatbot IA multilíngue.',
+      'Dashboard Teleperformance: Visualização de KPIs com Tableau e SQL, reduzindo em 40% o tempo de reportes.',
+      'Plataforma Jurídica Digital: App web com autenticação, banco de dados e envio de e-mails.',
+      'Análise de Dados com Python: Análise exploratória de redes sociais com Pandas, Matplotlib e Seaborn.',
+    ],
+    contato: [
+      'Você pode entrar em contato com Ivan pelo LinkedIn (linkedin.com/in/ivan-daniel-manrique-roa-978a29187) ou pelo e-mail. Ele está disponível para oportunidades como Desenvolvedor Frontend, Data Analyst ou posições híbridas.',
+    ],
+    corredor: [
+      'Ivan é corredor disciplinado e está se preparando para uma corrida de 35km no deserto de Marcona, com largada às 3AM. Ele aplica a mesma mentalidade de resiliência e melhoria contínua no código.',
+    ],
+    default: [
+      'Posso te ajudar com informações sobre experiência profissional, habilidades técnicas, formação acadêmica e projetos do Ivan. Sobre o que você gostaria de saber?',
+      'Pergunte sobre a experiência do Ivan na Ripnel ou Teleperformance, suas habilidades em frontend e dados, ou seus projetos!',
+    ],
+  },
+  es: {
+    experiencia: [
+      'Ivan trabajó en Ripnel desarrollando un ERP desde cero con React, Next.js y Supabase, optimizando procesos en un 30% con automatización e IA Generativa.',
+      'En Teleperformance, fue promovido a Tier 4 Trilingüe, lideró equipos e implementó dashboards en Tableau que redujeron en 40% el tiempo de generación de reportes.',
+      'Tiene experiencia práctica tanto en desarrollo frontend como en análisis de datos, construyendo desde interfaces hasta dashboards de métricas.',
+    ],
+    habilidades: [
+      'Frontend: React, Next.js, TypeScript, Tailwind CSS, Astro, HTML5, CSS3, JavaScript.',
+      'Data & IA: Python, SQL, Tableau, Power BI, Pandas, NumPy, Jupyter, IA Generativa.',
+      'Soft Skills: Liderazgo, Inteligencia Emocional, Resolución de Problemas, Comunicación Trilingüe (ES/EN/PT), Metodologías Ágiles.',
+    ],
+    formacao: [
+      'Ivan cursa Ingeniería de Software en la UTP, integra el Tercio Superior y participa en el programa de talentos directivos Impulsa UTP.',
+      'Posee certificaciones de Google (Data Analysis), Oracle (Next Education Front-End) y Platzi (Data Analyst).',
+    ],
+    projetos: [
+      'ERP Ripnel: Reducción del 30% en tiempo operativo y 45% en tiempo de respuesta al cliente con chatbot IA multilingüe.',
+      'Dashboard Teleperformance: Visualización de KPIs con Tableau y SQL, reduciendo en 40% el tiempo de reportes.',
+      'Plataforma Jurídica Digital: App web con autenticación, base de datos y envío de correos.',
+      'Análisis de Datos con Python: Análisis exploratorio de redes sociales con Pandas, Matplotlib y Seaborn.',
+    ],
+    contato: [
+      'Puedes contactar a Ivan por LinkedIn (linkedin.com/in/ivan-daniel-manrique-roa-978a29187) o por correo. Está disponible para oportunidades como Desarrollador Frontend, Data Analyst o posiciones híbridas.',
+    ],
+    corredor: [
+      'Ivan es runner disciplinado y se prepara para una carrera de 35km en el desierto de Marcona, con largada a las 3AM. Aplica la misma mentalidad de resiliencia y mejora continua en el código.',
+    ],
+    default: [
+      'Puedo ayudarte con información sobre experiencia profesional, habilidades técnicas, formación académica y proyectos de Ivan. ¿Qué te gustaría saber?',
+      '¡Pregunta sobre la experiencia de Ivan en Ripnel o Teleperformance, sus habilidades en frontend y datos, o sus proyectos!',
+    ],
+  },
+  en: {
+    experiencia: [
+      'Ivan worked at Ripnel building an ERP from scratch with React, Next.js, and Supabase, optimizing processes by 30% through automation and Generative AI.',
+      'At Teleperformance, he was promoted to Trilingual Tier 4, led teams, and implemented Tableau dashboards that reduced report generation time by 40%.',
+      'He has hands-on experience in both frontend development and data analysis, building everything from interfaces to metric dashboards.',
+    ],
+    habilidades: [
+      'Frontend: React, Next.js, TypeScript, Tailwind CSS, Astro, HTML5, CSS3, JavaScript.',
+      'Data & AI: Python, SQL, Tableau, Power BI, Pandas, NumPy, Jupyter, Generative AI.',
+      'Soft Skills: Team Leadership, Emotional Intelligence, Problem-Solving, Trilingual Communication (ES/EN/PT), Agile Methodologies.',
+    ],
+    formacao: [
+      'Ivan is pursuing Software Engineering at UTP, ranks in the top third of his class, and participates in the Impulsa UTP executive talent program.',
+      'He holds certifications from Google (Data Analysis), Oracle (Next Education Front-End), and Platzi (Data Analyst).',
+    ],
+    projetos: [
+      'ERP Ripnel: 30% reduction in operational time and 45% reduction in customer response time with a multilingual AI chatbot.',
+      'Teleperformance Dashboard: KPI visualization with Tableau and SQL, reducing reporting time by 40%.',
+      'Digital Legal Platform: Web app with authentication, database integration, and email sending.',
+      'Data Analysis with Python: Exploratory analysis of social media data using Pandas, Matplotlib, and Seaborn.',
+    ],
+    contato: [
+      'You can reach Ivan on LinkedIn (linkedin.com/in/ivan-daniel-manrique-roa-978a29187) or via email. He is open to opportunities as a Frontend Developer, Data Analyst, or hybrid roles.',
+    ],
+    corredor: [
+      'Ivan is a disciplined runner training for a 35km desert race in Marcona, starting at 3AM. He applies the same resilience and continuous improvement mindset to his code.',
+    ],
+    default: [
+      'I can help you with information about Ivan\'s professional experience, technical skills, education, and projects. What would you like to know?',
+      'Ask about Ivan\'s experience at Ripnel or Teleperformance, his frontend and data skills, or his projects!',
+    ],
+  },
+};
+
+const INTENTS: Record<string, string[]> = {
+  experiencia: ['experiência', 'experiencia', 'experience', 'trabalho', 'trabajo', 'work', 'trabalhou', 'trabajó', 'worked', 'carreira', 'carrera', 'career', 'profissional', 'profesional', 'professional', 'ripnel', 'teleperformance', 'estágio', 'estagio', 'internship', 'tier', 'customer service', 'empleo', 'job', 'employment'],
+  habilidades: ['habilidade', 'habilidad', 'skill', 'tecnologia', 'tecnología', 'technology', 'tech', 'stack', 'ferramenta', 'herramienta', 'tool', 'programação', 'programacion', 'programming', 'framework', 'linguagem', 'lenguaje', 'language', 'frontend', 'backend', 'dados', 'data', 'soft skill', 'língua', 'idioma', 'trilíngue', 'trilingue', 'trilingual', 'qué sabes hacer', 'what can you do', 'que sabes fazer'],
+  formacao: ['formação', 'formacion', 'education', 'educação', 'educacion', 'universidade', 'universidad', 'university', 'faculdade', 'facultad', 'college', 'curso', 'certificação', 'certificacion', 'certification', 'utp', 'impulsa', 'google', 'oracle', 'platzi', 'alura', 'estudo', 'estudio', 'study', 'degree', 'bachelor', 'ingeniería', 'engenharia', 'engineering'],
+  projetos: ['projeto', 'proyecto', 'project', 'portfolio', 'portfólio', 'portafolio', 'case', 'erp', 'dashboard', 'tableau', 'analise', 'análisis', 'analysis', 'python', 'abogado', 'law', 'legal', 'jurídico', 'juridico', 'what did you build', 'que construiste', 'o que construiu'],
+  contato: ['contato', 'contacto', 'contact', 'falar', 'hablar', 'talk', 'email', 'linkedin', 'contratar', 'hire', 'oportunidade', 'oportunidad', 'opportunity', 'vaga', 'vacante', 'job opening', 'currículo', 'curriculum', 'cv', 'resume', 'entrevista', 'interview', 'how to reach', 'cómo contacto', 'como contato'],
+  corredor: ['corredor', 'runner', 'corrida', 'running', 'maratona', 'maratón', 'marathon', 'deserto', 'desierto', 'desert', 'marcona', 'medalha', 'medalla', 'medal', 'inspiração', 'inspiración', 'inspiration', 'resiliência', 'resiliencia', 'resilience', 'disciplina', 'discipline', '3am', 'deporte', 'esporte', 'sport', 'hobby', 'passion'],
+};
+
+function getLocale(locale: string): string {
+  if (locale === 'en') return 'en';
+  if (locale === 'pt') return 'pt';
+  return 'es';
+}
+
+function getIntent(input: string): string {
+  const lower = input.toLowerCase();
+  for (const [key, keywords] of Object.entries(INTENTS)) {
+    if (keywords.some((kw) => lower.includes(kw))) {
+      return key;
+    }
+  }
+  return 'default';
+}
+
+function getRandomResponse(responses: string[]): string {
+  return responses[Math.floor(Math.random() * responses.length)];
+}
+
+export default function Chatbot({ i18n, locale }: ChatbotProps) {
+  const lang = getLocale(locale);
+  const responses = RESPONSES[lang] || RESPONSES.pt;
+  const [open, setOpen] = useState(false);
+  const [messages, setMessages] = useState<Message[]>([
+    { role: 'bot', text: i18n.CHATBOT_WELCOME || 'Olá! Como posso ajudar?' },
+  ]);
+  const [input, setInput] = useState('');
+  const messagesEndRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+  }, [messages]);
+
+  const handleSend = () => {
+    const trimmed = input.trim();
+    if (!trimmed) return;
+
+    const userMsg: Message = { role: 'user', text: trimmed };
+    const intent = getIntent(trimmed);
+    const intentResponses = responses[intent] || responses.default;
+    const botMsg: Message = { role: 'bot', text: getRandomResponse(intentResponses) };
+
+    setMessages((prev) => [...prev, userMsg, botMsg]);
+    setInput('');
+  };
+
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === 'Enter') handleSend();
+  };
+
+  return (
+    <>
+      <button
+        onClick={() => setOpen(!open)}
+        className="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-gradient-to-br from-magneto-500 to-magneto-700 text-white shadow-lg shadow-magneto-900/40 hover:scale-110 transition-all duration-300 flex items-center justify-center"
+        aria-label={i18n.CHATBOT_TITLE || 'Abrir chat'}
+      >
+        {open ? (
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" />
+          </svg>
+        ) : (
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+          </svg>
+        )}
+      </button>
+
+      {open && (
+        <div className="fixed bottom-24 right-6 z-50 w-[360px] max-w-[calc(100vw-2rem)] h-[500px] max-h-[calc(100vh-8rem)] bg-surface border border-magneto-800/50 rounded-2xl shadow-2xl shadow-black/40 flex flex-col overflow-hidden animate-fade-in">
+          <div className="bg-gradient-to-r from-magneto-700 to-magneto-900 px-5 py-3.5 flex items-center justify-between">
+            <div>
+              <h3 className="text-white font-display font-semibold text-sm">{i18n.CHATBOT_TITLE || 'Chat com Ivan'}</h3>
+              <p className="text-magneto-300 text-xs">{i18n.CHATBOT_SUBTITLE || 'Assistente virtual'}</p>
+            </div>
+            <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
+          </div>
+
+          <div className="flex-1 overflow-y-auto p-4 space-y-4 bg-surface">
+            {messages.map((msg, i) => (
+              <div
+                key={i}
+                className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'} animate-fade-in`}
+              >
+                <div
+                  className={`max-w-[80%] px-4 py-2.5 rounded-2xl text-sm leading-relaxed ${
+                    msg.role === 'user'
+                      ? 'bg-magneto-600 text-white rounded-br-md'
+                      : 'bg-surface-lighter text-gray-200 rounded-bl-md border border-magneto-800/30'
+                  }`}
+                >
+                  {msg.text}
+                </div>
+              </div>
+            ))}
+            <div ref={messagesEndRef} />
+          </div>
+
+          <div className="p-3 border-t border-magneto-800/50 bg-surface">
+            <div className="flex gap-2">
+              <input
+                type="text"
+                value={input}
+                onChange={(e) => setInput(e.target.value)}
+                onKeyDown={handleKeyDown}
+                placeholder={i18n.CHATBOT_PLACEHOLDER || 'Digite sua pergunta...'}
+                className="flex-1 bg-surface-lighter border border-magneto-800/50 rounded-xl px-4 py-2.5 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-magneto-500 transition-colors"
+              />
+              <button
+                onClick={handleSend}
+                className="bg-magneto-600 hover:bg-magneto-500 text-white rounded-xl px-4 py-2.5 transition-colors"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <line x1="22" y1="2" x2="11" y2="13" /><polygon points="22 2 15 22 11 13 2 9 22 2" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+    </>
+  );
+}

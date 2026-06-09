@@ -1,60 +1,144 @@
 {
-    "WEBPAGE_TITLE": "Portfolio - Ivan Manrique",
+    "WEBPAGE_TITLE": "Portfolio, Ivan Manrique | Frontend Dev & Data Analyst",
 
-    "MENU_A1": "About Me",
-    "MENU_A2": "Skills",
-    "MENU_A3": "Academic Background",
-    "MENU_A4": "Professional Experience",
+    "NAV_HOME": "Home",
+    "NAV_ABOUT": "About",
+    "NAV_EXPERIENCE": "Experience",
+    "NAV_SKILLS": "Skills",
+    "NAV_EDUCATION": "Education",
+    "NAV_CONTACT": "Contact",
+    "NAV_CV": "Download CV",
+    "LANG_ES": "ES",
+    "LANG_EN": "EN",
+    "LANG_PT": "PT",
 
-    "HEADER_TITLE" : "Ivan Daniel Manrique Roa",
-    "HEADER_DESCRIPTION" : "Passionate about data analysis and process optimization. Experience in Python, SQL, and Tableau for visualizing and analyzing data, improving metrics and response times by 25%. Constantly learning, I strive to add value through analytics and business intelligence.",
-    "HEADER_IMG_ALT" : "Profile of Ivan Manrique",
-    "HEADER_BADGE_TXT" : "Available for work",
-    
-    "SKILLS_TITLE" : "Skills",
-    "SKILLS_SUBTITLE1" : "Programming Languages 💻",
-    "SKILLS_SUBTITLE2" : "Web Development Frameworks 🌐",
-    "SKILLS_SUBTITLE3" : "Data Analysis 📈",
-    "SKILLS_SUBTITLE4" : "Others 🚀",
-    
-    "STUDIES_TITLE" : "Academic Background",
-    "STUDIES1_TITLE" : "Software Engineering - UTP",
-    "STUDIES1_STATE" : "Ongoing",
-    "STUDIES1_ALT" : "UTP Logo",
-    "STUDIES2_TITLE" : "Complete Java Mastery from Beginner to Expert 2023 - Udemy",
-    "STUDIES2_STATE" : "Ongoing",
-    "STUDIES2_ALT" : "Udemy Logo",
-    "STUDIES3_TITLE" : "FrontEnd Specialization - Alura",
-    "STUDIES3_STATE" : "Completed",
-    "STUDIES3_ALT" : "Alura Logo",
+    "HERO_H1": "Code, data and miles: I build solutions that perform.",
+    "HERO_H2": "Frontend Developer & Data Analyst. I turn data into decisions and ideas into high-impact interfaces, with the same discipline as someone who runs long distances across the desert.",
+    "HERO_CTA_PRIMARY": "View Projects",
+    "HERO_CTA_SECONDARY": "Download CV",
+    "HERO_IMG_ALT": "Profile picture of Ivan Manrique",
+    "HERO_BADGE": "Open to opportunities",
+
+    "ABOUT_TITLE": "About Me",
+    "ABOUT_P1": "I'm Ivan Daniel Manrique Roa, Frontend Developer and Data Analyst. I build bridges between the data world and user experience, turning complex requirements into digital products that deliver measurable results.",
+    "ABOUT_P2": "I'm currently pursuing a Software Engineering degree at UTP, where I was selected for the executive talent program <strong>Impulsa UTP</strong> and rank in the top third of my class. My journey blends two worlds: the analytical precision of data and the art of crafting interfaces that delight.",
+    "ABOUT_P3": "Away from the screen, I'm a disciplined runner. I'm training for a 35km desert race in Marcona, starting at 3AM, and am on track to earn the <strong>\"Medal of Inspiration\"</strong>. Every kilometer reinforces the same skills I apply in code: resilience, focus under pressure, time management, and continuous improvement. One sprint at a time, one commit at a time.",
+    "ABOUT_CTA": "Learn my full story",
+
+    "EXPERIENCE_TITLE": "Professional Experience",
+    "EXPERIENCE_SUBTITLE": "Proven results with the STAR method",
+
+    "EXP_RIPNEL_ROLE": "Frontend Developer, Ripnel",
+    "EXP_RIPNEL_PERIOD": "Internship | 2026",
+    "EXP_RIPNEL_1": "Built a full corporate ERP from scratch using React, Next.js, and Supabase, delivering a functional platform that centralizes the company's internal operations.",
+    "EXP_RIPNEL_2": "Implemented automation pipelines with Generative AI for data validation and processing, reducing registration time by 30% and eliminating recurring manual errors.",
+    "EXP_RIPNEL_3": "Designed and integrated an intelligent multilingual chatbot, decreasing customer response time by 45% and improving internal support satisfaction scores.",
+    "EXP_RIPNEL_4": "Collaborated directly with stakeholders to translate business requirements into technical features, applying agile methodologies with iterative deliveries.",
+
+    "EXP_TP_ROLE": "Customer Service Agent, Teleperformance",
+    "EXP_TP_PERIOD": "2024 – Present",
+    "EXP_TP_1": "Promoted to Trilingual Tier 4 (Spanish, English, Portuguese), leading support teams and serving as the escalation point for high-complexity cases.",
+    "EXP_TP_2": "Deployed interactive dashboards with Tableau for operational metric analysis, optimizing KPI visualization and reducing weekly reporting time by 40%.",
+    "EXP_TP_3": "Led training and mentoring sessions for over 20 agents, increasing First Contact Resolution (FCR) rates by 25% through documentation and process standardization.",
+    "EXP_TP_4": "Managed customer data with a focus on quality and integrity, applying Data Cleaning techniques and exploratory analysis to identify recurrence patterns and propose preventive solutions.",
+
+    "PROJECTS_TITLE": "Featured Projects",
+    "PROJECTS_SUBTITLE": "Real cases with measurable impact",
+
+    "PROJ_RIPNEL_TITLE": "Corporate ERP, Ripnel",
+    "PROJ_RIPNEL_DESC": "Complete ERP built from scratch with React, Next.js, and Supabase. Includes inventory management, authentication, multilingual AI chatbot, and metric dashboards.",
+    "PROJ_RIPNEL_RESULT": "30% reduction in operational time and 45% reduction in customer response time.",
+    "PROJ_RIPNEL_TECHS": "React | Next.js | Supabase | Tailwind CSS | TypeScript | Generative AI",
+    "PROJ_RIPNEL_DEMO": "#",
+    "PROJ_RIPNEL_REPO": "#",
+
+    "PROJ_TP_TITLE": "Metrics Dashboard, Teleperformance",
+    "PROJ_TP_DESC": "Interactive dashboard system in Tableau connected to SQL Server databases. Visualization of service KPIs: FCR, CSAT, and average resolution times.",
+    "PROJ_TP_RESULT": "40% reduction in report generation time and 18% increase in data-driven decision making.",
+    "PROJ_TP_TECHS": "Tableau | SQL | Excel | ETL | CX Metrics",
+    "PROJ_TP_DEMO": "#",
+    "PROJ_TP_REPO": "#",
+
+    "PROJ_DATA_TITLE": "Data Analysis with Python",
+    "PROJ_DATA_DESC": "Exploratory data analysis and cleaning project on social media data using Python, Pandas, and visualization with Matplotlib and Seaborn.",
+    "PROJ_DATA_RESULT": "Identified the year with the lowest engagement and delivered a data-driven strategic recommendation.",
+    "PROJ_DATA_TECHS": "Python | Pandas | NumPy | Matplotlib | Seaborn | Jupyter",
+    "PROJ_DATA_DEMO": "https://www.kaggle.com/code/ivanedasdsada/social-media-exploratory-analisis",
+    "PROJ_DATA_REPO": "https://www.kaggle.com/code/ivanedasdsada/social-media-exploratory-analisis",
+
+    "PROJ_ABOGADO_TITLE": "Digital Legal Platform",
+    "PROJ_ABOGADO_DESC": "Web platform with protected routes, user authentication, service listings from database, and contact email sending. Built with React and a relational database.",
+    "PROJ_ABOGADO_RESULT": "Functional system with complete authentication and database integration for legal services management.",
+    "PROJ_ABOGADO_TECHS": "React | MySQL | Node.js | HTML5 | CSS3 | JavaScript",
+    "PROJ_ABOGADO_DEMO": "https://proyecto-abogado.vercel.app/",
+    "PROJ_ABOGADO_REPO": "https://github.com/idmr023/ProyectoAbogado",
+
+    "SKILLS_TITLE": "Skills & Technologies",
+    "SKILLS_SUBTITLE": "Technical stack and soft skills",
+
+    "SKILLS_FRONTEND_TITLE": "Frontend Development",
+    "SKILLS_FRONTEND_ITEMS": "React | Next.js | TypeScript | Astro | Tailwind CSS | HTML5 | CSS3 | JavaScript (ES6+) | Bootstrap",
+
+    "SKILLS_DATA_TITLE": "Data & AI",
+    "SKILLS_DATA_ITEMS": "Python | SQL | Tableau | Power BI | Pandas | NumPy | Jupyter | ETL | Data Cleaning | Generative AI",
+
+    "SKILLS_SOFT_TITLE": "Soft Skills & Leadership",
+    "SKILLS_SOFT_ITEMS": "Team Leadership | Emotional Intelligence | Problem-Solving | Trilingual Communication | Time Management | Agile Methodologies | Mentoring | Adaptability",
+
+    "SKILLS_TOOLS_TITLE": "Tools & Infra",
+    "SKILLS_TOOLS_ITEMS": "Git | GitHub | Supabase | Vercel | Figma | Trello | Advanced Excel | VS Code | Docker",
+
+    "EDUCATION_TITLE": "Education & Achievements",
+    "EDUCATION_UTP_TITLE": "Software Engineering, UTP",
+    "EDUCATION_UTP_DESC": "Top third of class. Selected for the Impulsa UTP executive talent program.",
+    "EDUCATION_UTP_STATUS": "Ongoing",
+
+    "EDUCATION_IMPULSA_TITLE": "Impulsa UTP Program",
+    "EDUCATION_IMPULSA_DESC": "Executive talent program focused on leadership, innovation, and strategic business vision.",
+    "EDUCATION_IMPULSA_STATUS": "Ongoing",
 
     "CERTIFICATIONS_TITLE": "Certifications",
-    "CERTIFICATIONS_SUBTITLE1": "Data Analyst, Platzi, 2025",
-    "CERTIFICATIONS_DESCRIPTION1": "Data Cleaning | Python | NumPy | Pandas | Matplotlib | Seaborn | Jupyter Notebook",
-    
-    "CERTIFICATIONS_SUBTITLE2": "Oracle Next Education Front-end, Alura Latam, 2023",
-    "CERTIFICATIONS_DESCRIPTION2": "HTML5 | CSS3 | JavaScript | ReactJS | PHP | MySQL | Git & GitHub | Trello | Figma | Business Agility",
-        
-    "CERTIFICATIONS_SUBTITLE3": "Google Data Analysis",
-    "CERTIFICATIONS_DESCRIPTION3": "Spreadsheets | Tableau | R",    
 
-    "EXP_TITLE" : "Professional Experience",
-    "EXP1_TITLE" : "Clean and Analyze Social Media Usage Data with Python",
-    "EXP1_DESCRIPTION" : "A project analyzing the data from a fictitious social media platform to gain insights. Through data cleaning and analysis, I identified the year with the least customer engagement and the reasons behind it, along with a solution.",
-    "EXP2_TITLE" : "Law Firm",
-    "EXP2_DESCRIPTION" : "The project includes protected routes, user authentication and registration, services listing from the database, and contact email sending. Is currently in development and I'm searching for any usuful feature to add.",
-    "EXP3_TITLE" : "Asteroids",
-    "EXP3_DESCRIPTION" : "This project, created with JS and Phaser, is a classic 2D game similar to  Space Invaders, but with the added feature of being controlled by voice.",
-    "EXP4_TITLE": "Hotel Antares",
-    "EXP4_DESCRIPTION": "Project developed in Java using JSP and JSF. Includes a functional login system, room registration, and customer management, as well as all the necessary features for hotel administrators to efficiently manage their operations.",
-    "EXP5_TITLE": "3D Unity Video Game",
-    "EXP5_DESCRIPTION": "Development of a video game in Unity, including sprite creation, asset integration, terrain modeling with the Terrain tool, collision implementation, and a fully functional game engine. The in-game vehicle is fully operational and controlled using arrow keys.",
+    "CERT_GOOGLE_TITLE": "Data Analysis, Google",
+    "CERT_GOOGLE_DESC": "Spreadsheets | Tableau | R | Data Cleaning | Data Visualization | Data Storytelling",
 
-    
-    "FOOTER_TITLE" : "Developed by Ivan Manrique | 2025",
+    "CERT_ORACLE_TITLE": "Oracle Next Education Front-End, Alura Latam, 2023",
+    "CERT_ORACLE_DESC": "HTML5 | CSS3 | JavaScript | ReactJS | PHP | MySQL | Git & GitHub | Figma | Business Agility",
 
-    "SMB_ARIA_LABEL1" : "More info on my LinkedIn",
-    "SMB_ARIA_LABEL2" : "More info on my GitHub",
+    "CERT_IBM_TITLE": "Data Analyst, Platzi, 2025",
+    "CERT_IBM_DESC": "Python | NumPy | Pandas | Matplotlib | Seaborn | Jupyter Notebook | Data Cleaning",
 
-    "NOTFOUND_404" : "404 Page Not Found"
+    "RUNNING_TITLE": "Runner Mindset",
+    "RUNNING_QUOTE": "\"Every kilometer is an iteration. Every race is a deploy. Impossible is just a matter of cadence.\"",
+    "RUNNING_DESC": "Training for a 35km desert race in Marcona. Starting at 3AM. Pursuing the Medal of Inspiration.",
+    "RUNNING_STATS_1": "35km",
+    "RUNNING_LABEL_1": "Desert distance",
+    "RUNNING_STATS_2": "Marcona",
+    "RUNNING_LABEL_2": "Desert crossed",
+    "RUNNING_STATS_3": "3AM",
+    "RUNNING_LABEL_3": "Night start",
+
+    "CONTACT_TITLE": "Let's build something together?",
+    "CONTACT_SUBTITLE": "If you're looking for a professional who combines technical excellence with a high-performance mindset, you're in the right place. I'm open to opportunities as a Frontend Developer, Data Analyst, or hybrid roles where tech and data meet.",
+    "CONTACT_CTA_PRIMARY": "Let's Talk",
+    "CONTACT_CTA_SECONDARY": "Download CV",
+    "CONTACT_EMAIL": "ivanmanrique@email.com",
+
+    "FOOTER_TEXT": "Built with discipline by Ivan Manrique",
+    "FOOTER_RIGHTS": "All rights reserved.",
+
+    "SMB_LINKEDIN": "Connect with me on LinkedIn",
+    "SMB_GITHUB": "Check my projects on GitHub",
+    "SMB_CV": "Download Resume",
+
+    "CHATBOT_TITLE": "Chat with Ivan",
+    "CHATBOT_SUBTITLE": "Ask me about my experience, skills, and projects.",
+    "CHATBOT_PLACEHOLDER": "Ask about my experience, skills or projects...",
+    "CHATBOT_WELCOME": "Hey! I'm Ivan's virtual assistant. I can help you with info about professional experience, technical skills, education, or projects. What would you like to know?",
+
+    "SEARCH_PLACEHOLDER": "Search portfolio...",
+    "SEARCH_EMPTY": "No results found.",
+    "SEARCH_HINT": "Press Ctrl+K to search",
+
+    "NOTFOUND_404": "404, Page Not Found"
 }

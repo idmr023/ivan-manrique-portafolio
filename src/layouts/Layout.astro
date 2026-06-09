@@ -1,41 +1,92 @@
 ---
 interface Props {
-	title: string;
+  title: string;
+  description?: string;
 }
 
-const { title } = Astro.props;
+const { title, description } = Astro.props;
+const metaDescription = description || "Portafolio profesional de Ivan Manrique — Desarrollador Frontend & Data Analyst especializado en React, Next.js, Python y Data Analysis. Conecta conmigo.";
 ---
 
 <!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-		<script src="https://kit.fontawesome.com/47427cc084.js" crossorigin="anonymous"></script>
-	</head>
-	<body>
-		<slot />
-	</body>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={metaDescription} />
+    <meta name="keywords" content="Frontend Developer, Data Analyst, React, Next.js, Python, SQL, Tableau, Portfolio, Desarrollador, Analista de Datos" />
+    <meta name="author" content="Ivan Daniel Manrique Roa" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={metaDescription} />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/profile.webp" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={metaDescription} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Montserrat:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body class="bg-surface text-white font-sans antialiased">
+    <slot />
+  </body>
 </html>
 <style is:global>
-	@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Condensed&family=Titillium+Web:wght@200&display=swap');
-	
-	h1, h2, h3, h4, h5, h6 {
-		font-family: 'Roboto Condensed', sans-serif;
-	}
-	h2{
-		font-size: 18px;
-	}
-	a, p, select, option, button, span {
-		font-family: 'Titillium Web', sans-serif;
-	}
-	html {
-		background: #13151a;
-		background-size: 224px;
-	}
-	
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background: #0A1A30;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+  }
+
+  ::selection {
+    background-color: rgba(46, 117, 211, 0.4);
+    color: white;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0B1424;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #174a94;
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #1e5fba;
+  }
+
+  /* Animations */
+  @keyframes fade-in-up {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  .animate-on-scroll {
+    opacity: 0;
+    animation: fade-in-up 0.7s ease-out forwards;
+  }
+
+  .delay-100 { animation-delay: 0.1s; }
+  .delay-200 { animation-delay: 0.2s; }
+  .delay-300 { animation-delay: 0.3s; }
+  .delay-400 { animation-delay: 0.4s; }
+  .delay-500 { animation-delay: 0.5s; }
 </style>
