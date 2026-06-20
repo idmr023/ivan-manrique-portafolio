@@ -17,7 +17,7 @@ const SEARCH_INDEX: SearchItem[] = [
   { label: 'Sobre mim', section: 'about', href: '#about', keywords: ['sobre', 'about', 'história', 'historia', 'runner', 'corredor', 'disciplina', 'ultramaratona', 'marcona'] },
   { label: 'Experiência Profissional', section: 'experience', href: '#experience', keywords: ['experiência', 'experiencia', 'trabalho', 'carreira', 'profissional', 'ripnel', 'teleperformance', 'erp'] },
   { label: 'Projetos em Destaque', section: 'projects', href: '#projects', keywords: ['projetos', 'projetos', 'projects', 'portfolio', 'portfólio', 'portifolio', 'case', 'dashboard', 'python'] },
-  { label: 'Habilidades & Tecnologias', section: 'skills', href: '#skills', keywords: ['habilidades', 'skills', 'tecnologia', 'tech', 'stack', 'react', 'python', 'sql', 'tableau', 'frontend', 'dados'] },
+  { label: 'Habilidades & Tecnologias', section: 'skills', href: '#skills', keywords: ['habilidades', 'skills', 'tecnologia', 'tech', 'stack', 'react', 'python', 'sql', 'tableau', 'frontend', 'dados', 'universo', 'universe', 'estrellas', 'stars', 'constelacion', 'liderazgo', 'resiliencia', 'soft skills'] },
   { label: 'Formação & Conquistas', section: 'education', href: '#education', keywords: ['formação', 'formacao', 'educação', 'educacao', 'utp', 'impulsa', 'certificação', 'certificacao', 'universidade'] },
   { label: 'Contato', section: 'contact', href: '#contact', keywords: ['contato', 'contact', 'falar', 'email', 'linkedin', 'contratar', 'vaga'] },
 ];
@@ -100,7 +100,7 @@ export default function SearchModal({ i18n, currentLocale }: SearchModalProps) {
       <div className="fixed inset-0 bg-black/70 backdrop-blur-sm" />
       <div
         ref={modalRef}
-        className="relative w-full max-w-lg bg-surface border border-magneto-800/50 rounded-2xl shadow-2xl overflow-hidden animate-fade-in"
+        className="relative w-full max-w-lg bg-surface border border-magneto-800/50 rounded-lg shadow-2xl overflow-hidden animate-fade-in"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="flex items-center gap-3 px-5 py-4 border-b border-magneto-800/30">
