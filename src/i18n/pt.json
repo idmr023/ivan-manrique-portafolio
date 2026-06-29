@@ -51,7 +51,7 @@
     "PROJ_RIPNEL_DESC": "Uma empresa têxtil e de varejo dependia inteiramente de processos manuais e baseados em papel para seu inventário, transferências e vendas diárias, gerando ineficiências e discrepâncias nos dados. Co-desenvolvi Ripnel, um MVP integral de ERP web e POS (Point of Sale) projetado para digitalizar completamente as operações em múltiplas lojas. Construí interfaces responsivas e otimizadas com frameworks modernos de frontend, acopladas a uma arquitetura backend robusta para lidar com lógica de negócio complexa (vendas, inventário multi-loja, caixas). Integrei um assistente de IA Agentic (Google Gemini) diretamente no banco de dados para automatizar analytics, relatórios em tempo real e responder consultas em linguagem natural. Além disso, redigi documentação técnica completa do sistema para garantir manutenibilidade a longo prazo.",
     "PROJ_RIPNEL_RESULT": "Redução de 30% no tempo operacional e 45% no tempo de resposta ao cliente.",
     "PROJ_RIPNEL_TECHS": "React | Next.js | Supabase | TypeScript | Tailwind CSS | Google Gemini AI | PostgreSQL",
-    "PROJ_RIPNEL_IMAGE": "/projects/ripnel-erp.png",
+    "PROJ_RIPNEL_IMAGE": "/projects/ripnel.png",
     "PROJ_RIPNEL_DEMO": "#",
     "PROJ_RIPNEL_REPO": "#",
 
@@ -59,7 +59,7 @@
     "PROJ_COMMERCIAL_BI_DESC": "Desenvolvi um dashboard integral de acompanhamento comercial utilizando Power BI para um caso de negócio simulado. O projeto focou em transformar dados brutos em um dashboard interativo e visualmente atraente para acompanhar métricas chave da empresa. Implementei fórmulas DAX avançadas, criei tabelas calculadas e projetei medidas otimizadas em memória para garantir alto desempenho e tempos de carregamento rápidos. O produto final forneceu insights claros e acionáveis para a tomada de decisões comerciais.",
     "PROJ_COMMERCIAL_BI_RESULT": "Dashboard interativo com DAX avançado e medidas otimizadas para decisão comercial.",
     "PROJ_COMMERCIAL_BI_TECHS": "Power BI | DAX | SQL | Data Modeling | ETL | Data Visualization",
-    "PROJ_COMMERCIAL_BI_IMAGE": "/projects/commercial-bi.png",
+    "PROJ_COMMERCIAL_BI_IMAGE": "/projects/dashboard_bi.png",
     "PROJ_COMMERCIAL_BI_DEMO": "#",
     "PROJ_COMMERCIAL_BI_REPO": "#",
 
@@ -67,7 +67,7 @@
     "PROJ_CX_METRICS_DESC": "Gerenciei e analisei dados usando um sistema de dashboards interativos em Tableau e SQL Server para uma empresa BPO global. Meu papel focou em operar essas ferramentas para acompanhar, interpretar e reportar métricas críticas de Customer Experience, incluindo First Contact Resolution, CSAT e Average Resolution Time. Ao navegar eficientemente os pipelines de dados existentes e otimizar o fluxo de trabalho de relatórios diários, reduzi o tempo de geração de relatórios em 40% e forneci insights claros e acionáveis que aumentaram a eficiência na tomada de decisões da equipe de gestão em 18%.",
     "PROJ_CX_METRICS_RESULT": "Redução de 40% no tempo de relatórios e aumento de 18% na eficiência de decisões.",
     "PROJ_CX_METRICS_TECHS": "Tableau | SQL Server | Excel | ETL | CX Metrics | Data Pipelines",
-    "PROJ_CX_METRICS_IMAGE": "/projects/cx-metrics.png",
+    "PROJ_CX_METRICS_IMAGE": "/projects/tp_dashboard.jpg",
     "PROJ_CX_METRICS_DEMO": "#",
     "PROJ_CX_METRICS_REPO": "#",
 
@@ -75,7 +75,7 @@
     "PROJ_SOCIAL_EDA_DESC": "Conduzi uma Análise Exploratória de Dados (EDA) em um dataset de redes sociais utilizando Python. Limpei e processei os dados com sucesso para identificar tendências de engajamento dos clientes, detectei as causas raiz das quedas históricas na interação de usuários e propus resoluções baseadas em dados para melhorar o desempenho futuro. A análise revelou padrões de comportamento e pontos de inflexão que permitiram formular recomendações estratégicas acionáveis.",
     "PROJ_SOCIAL_EDA_RESULT": "Identificação de causas raiz de quedas de engajamento e recomendações data-driven.",
     "PROJ_SOCIAL_EDA_TECHS": "Python | Pandas | NumPy | Matplotlib | Seaborn | Jupyter | EDA",
-    "PROJ_SOCIAL_EDA_IMAGE": "/projects/social-eda.png",
+    "PROJ_SOCIAL_EDA_IMAGE": "/projects/data_claening.png",
     "PROJ_SOCIAL_EDA_DEMO": "https://www.kaggle.com/code/ivanedasdsada/social-media-exploratory-analisis",
     "PROJ_SOCIAL_EDA_REPO": "https://www.kaggle.com/code/ivanedasdsada/social-media-exploratory-analisis",
 
@@ -83,7 +83,7 @@
     "PROJ_LAW_FIRM_DESC": "O escritório jurídico precisava modernizar sua gestão de casos e clientes, transitando de processos manuais para um ambiente digital rápido e seguro. Criei uma aplicação web intuitiva onde os advogados podiam acessar informações instantaneamente, com um sistema de rotas claro para navegação fluida. O resultado se alinhou com as expectativas: um design de UI/UX profissional que transmitia confiança e uma arquitetura técnica robusta capaz de lidar com bancos de dados eficientemente. Inclui autenticação de usuários, rotas protegidas, listagem de serviços do banco de dados e envio de e-mails de contato.",
     "PROJ_LAW_FIRM_RESULT": "Sistema funcional com autenticação, rotas protegidas e integração de banco de dados.",
     "PROJ_LAW_FIRM_TECHS": "React | MySQL | Node.js | HTML5 | CSS3 | JavaScript",
-    "PROJ_LAW_FIRM_IMAGE": "/projects/law-firm.png",
+    "PROJ_LAW_FIRM_IMAGE": "/projects/law_firm.png",
     "PROJ_LAW_FIRM_DEMO": "https://proyecto-abogado.vercel.app/",
     "PROJ_LAW_FIRM_REPO": "https://github.com/idmr023/ProyectoAbogado",
 
@@ -118,9 +118,16 @@
     "SKILLS_MAP_CATEGORY_DATA": "Data & IA",
     "SKILLS_MAP_CATEGORY_TOOLS": "Ferramentas",
     "SKILLS_MAP_CATEGORY_SOFT": "Soft Skills",
+    "SKILLS_TERMINAL_EXECUTE": "Executar",
+    "SKILLS_TERMINAL_REEXECUTE": "Re-executar",
+    "SKILLS_TERMINAL_READY": "Sistema pronto. Pressione Executar para ver tudo.",
+    "SKILLS_TERMINAL_SUMMARY": "{skills} soft skills · {techs} tecnologias",
     "PROJECTS_LABEL_PROBLEM": "Problema",
     "PROJECTS_LABEL_STACK": "Stack",
     "PROJECTS_LABEL_RESULT": "Resultado",
+    "PROJECTS_LABEL_DEMO": "Demo ao Vivo",
+    "PROJECTS_LABEL_REPO": "Repositório",
+    "PROJECTS_LABEL_FEATURED": "Destaque",
 
     "SKILL_1_NAME": "Liderança Adaptativa",
     "SKILL_1_SCENARIO": "Promoção a Tier 4 na Teleperformance e Caso Grupal Impulsa UTP",

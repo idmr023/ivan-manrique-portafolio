@@ -2,16 +2,16 @@ import spanish from './es.json';
 import english from './en.json';
 import portuguese from './pt.json';
 
-const LANGUAGES = {
-    ENGLISH : 'en',
-    SPANISH: 'es',
-    PORTUGUESE: 'pt'
-}
+export type Locale = 'es' | 'en' | 'pt';
 
-export const getI18N = ({ currentLocale = 'es' }: { currentLocale: string | undefined
-    }) => {
-    if (currentLocale === LANGUAGES.ENGLISH) return english
-    if (currentLocale === LANGUAGES.SPANISH) return spanish
-    if (currentLocale === LANGUAGES.PORTUGUESE) return portuguese
-    return spanish
+export const locales: Locale[] = ['es', 'en', 'pt'];
+
+const messages: Record<Locale, Record<string, string>> = {
+  es: spanish,
+  en: english,
+  pt: portuguese,
+};
+
+export function getI18n(locale: Locale): Record<string, string> {
+  return messages[locale] ?? spanish;
 }

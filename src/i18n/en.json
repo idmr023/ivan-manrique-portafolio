@@ -51,7 +51,7 @@
     "PROJ_RIPNEL_DESC": "A textile and retail company relied entirely on manual, paper-based processes for their inventory, transfers, and daily sales, leading to inefficiencies and data discrepancies. I co-developed Ripnel, a comprehensive, custom web-based ERP and POS (Point of Sale) system designed to fully digitize their operations across multiple store locations. Built highly responsive and optimized user interfaces using modern frontend frameworks, coupled with a robust backend architecture to handle complex business logic (sales, multi-location inventory, cash registers). Integrated an Agentic AI assistant (Google Gemini) directly into the database to automate analytics, provide real-time reporting, and answer natural language queries. Authored comprehensive system documentation to ensure long-term maintainability.",
     "PROJ_RIPNEL_RESULT": "30% reduction in operational time and 45% reduction in customer response time.",
     "PROJ_RIPNEL_TECHS": "React | Next.js | Supabase | TypeScript | Tailwind CSS | Google Gemini AI | PostgreSQL",
-    "PROJ_RIPNEL_IMAGE": "/projects/ripnel-erp.png",
+    "PROJ_RIPNEL_IMAGE": "/projects/ripnel.png",
     "PROJ_RIPNEL_DEMO": "#",
     "PROJ_RIPNEL_REPO": "#",
 
@@ -59,7 +59,7 @@
     "PROJ_COMMERCIAL_BI_DESC": "Developed a comprehensive commercial tracking dashboard using Power BI for a simulated business case. The project focused on transforming raw data into an interactive and visually engaging dashboard to track key company metrics. I implemented advanced DAX formulas, created calculated tables, and designed memory-optimized measures to ensure high performance and fast load times. The final product successfully provided clear, actionable insights for commercial decision-making.",
     "PROJ_COMMERCIAL_BI_RESULT": "Interactive dashboard with advanced DAX and memory-optimized measures for commercial decisions.",
     "PROJ_COMMERCIAL_BI_TECHS": "Power BI | DAX | SQL | Data Modeling | ETL | Data Visualization",
-    "PROJ_COMMERCIAL_BI_IMAGE": "/projects/commercial-bi.png",
+    "PROJ_COMMERCIAL_BI_IMAGE": "/projects/dashboard_bi.png",
     "PROJ_COMMERCIAL_BI_DEMO": "#",
     "PROJ_COMMERCIAL_BI_REPO": "#",
 
@@ -67,7 +67,7 @@
     "PROJ_CX_METRICS_DESC": "Managed and analyzed data using an interactive dashboard system in Tableau and SQL Server for a global BPO company. My role focused on operating these tools to track, interpret, and report critical Customer Experience metrics, including First Contact Resolution, CSAT, and Average Resolution Time. By efficiently navigating the existing data pipelines and streamlining the daily reporting workflow, I successfully reduced report generation time by 40% and provided clear, actionable insights that increased decision-making efficiency across the management team by 18%.",
     "PROJ_CX_METRICS_RESULT": "40% reduction in report generation time and 18% increase in decision-making efficiency.",
     "PROJ_CX_METRICS_TECHS": "Tableau | SQL Server | Excel | ETL | CX Metrics | Data Pipelines",
-    "PROJ_CX_METRICS_IMAGE": "/projects/cx-metrics.png",
+    "PROJ_CX_METRICS_IMAGE": "/projects/tp_dashboard.jpg",
     "PROJ_CX_METRICS_DEMO": "#",
     "PROJ_CX_METRICS_REPO": "#",
 
@@ -75,7 +75,7 @@
     "PROJ_SOCIAL_EDA_DESC": "Conducted an Exploratory Data Analysis (EDA) on a social media dataset using Python. I successfully cleaned and processed the data to track customer engagement trends, identified the root causes for historical drops in user interaction, and proposed data-driven resolutions to improve future performance. The analysis revealed behavioral patterns and inflection points that enabled actionable strategic recommendations.",
     "PROJ_SOCIAL_EDA_RESULT": "Identified root causes of engagement drops and delivered data-driven recommendations.",
     "PROJ_SOCIAL_EDA_TECHS": "Python | Pandas | NumPy | Matplotlib | Seaborn | Jupyter | EDA",
-    "PROJ_SOCIAL_EDA_IMAGE": "/projects/social-eda.png",
+    "PROJ_SOCIAL_EDA_IMAGE": "/projects/data_claening.png",
     "PROJ_SOCIAL_EDA_DEMO": "https://www.kaggle.com/code/ivanedasdsada/social-media-exploratory-analisis",
     "PROJ_SOCIAL_EDA_REPO": "https://www.kaggle.com/code/ivanedasdsada/social-media-exploratory-analisis",
 
@@ -83,7 +83,7 @@
     "PROJ_LAW_FIRM_DESC": "The law firm needed to modernize their case and client management, transitioning from manual processes to a fast and secure digital environment. I created an intuitive web application where lawyers could access information instantly, with a clear routing system for seamless navigation. The result aligned with the expectations: a professional UI/UX design that conveyed trust and a robust technical architecture capable of handling databases efficiently. Includes user authentication, protected routes, service listings from database, and contact email sending.",
     "PROJ_LAW_FIRM_RESULT": "Functional system with authentication, protected routing, and database integration.",
     "PROJ_LAW_FIRM_TECHS": "React | MySQL | Node.js | HTML5 | CSS3 | JavaScript",
-    "PROJ_LAW_FIRM_IMAGE": "/projects/law-firm.png",
+    "PROJ_LAW_FIRM_IMAGE": "/projects/law_firm.png",
     "PROJ_LAW_FIRM_DEMO": "https://proyecto-abogado.vercel.app/",
     "PROJ_LAW_FIRM_REPO": "https://github.com/idmr023/ProyectoAbogado",
 
@@ -118,9 +118,16 @@
     "SKILLS_MAP_CATEGORY_DATA": "Data & AI",
     "SKILLS_MAP_CATEGORY_TOOLS": "Tools",
     "SKILLS_MAP_CATEGORY_SOFT": "Soft Skills",
+    "SKILLS_TERMINAL_EXECUTE": "Execute",
+    "SKILLS_TERMINAL_REEXECUTE": "Re-execute",
+    "SKILLS_TERMINAL_READY": "System ready. Press Execute to see all.",
+    "SKILLS_TERMINAL_SUMMARY": "{skills} soft skills · {techs} technologies",
     "PROJECTS_LABEL_PROBLEM": "Problem",
     "PROJECTS_LABEL_STACK": "Stack",
     "PROJECTS_LABEL_RESULT": "Result",
+    "PROJECTS_LABEL_DEMO": "Live Demo",
+    "PROJECTS_LABEL_REPO": "Repository",
+    "PROJECTS_LABEL_FEATURED": "Featured",
 
     "SKILL_1_NAME": "Adaptive Leadership",
     "SKILL_1_SCENARIO": "Promotion to Tier 4 at Teleperformance and Group Case at Impulsa UTP",
