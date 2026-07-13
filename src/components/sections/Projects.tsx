@@ -12,13 +12,59 @@ interface ProjectsProps {
   projects: Project[];
 }
 
+// Project categories based on purpose (Spanish labels as requested)
+const projectCategories = {
+  dataAnalysis: {
+    label: '(Análisis de Datos)',
+    color: '#f472b6',
+    projects: ['Limpieza y Análisis de Redes Sociales', 'CX Metrics Analysis — Teleperformance', 'Commercial Tracking Dashboard BI'],
+  },
+  portfolios: {
+    label: '(Portafolios)',
+    color: '#38bdf8',
+    projects: ['Mi Portafolio', 'Portafolio Abogado', 'Portafolio Ana'],
+  },
+  businessManagement: {
+    label: '(Sistemas de Gestión Comercial)',
+    color: '#f59e0b',
+    projects: ['Custom ERP System — Ripnel', 'Sistema de Gestión Jurídica', 'MultiSaaS', 'Ollas Comunes'],
+  },
+};
+
 export default function Projects({ i18n, projects }: ProjectsProps) {
+  // Filter projects based on category
+  const filteredProjects = projects.filter((proj) => {
+    const allProjects = [
+      ...projectCategories.dataAnalysis.projects,
+      ...projectCategories.portfolios.projects,
+      ...projectCategories.businessManagement.projects,
+    ];
+    return allProjects.includes(proj.title);
+  });
+
   return (
     <SectionContainer sectionNumber="04" title={i18n.PROJECTS_TITLE} id="projects">
       <p className="text-slate-500 text-sm mb-10 font-mono text-center">{i18n.PROJECTS_SUBTITLE}</p>
 
+      {/* Project Filter Tabs */}
+      <div className="flex flex-wrap justify-center gap-3 mb-16">
+        {Object.entries(projectCategories).map(([key, category]) => (
+          <button
+            key={key}
+            className="px-6 py-2.5 rounded-full font-mono text-sm uppercase tracking-wider transition-all duration-300 border border-sky-400/20 hover:border-sky-400/40 hover:bg-sky-400/5 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-sky-400/50"
+            style={{ 
+              color: category.color,
+              backgroundColor: 'rgba(8, 8, 12, 0.6)',
+              backdropFilter: 'blur(8px)',
+            }}
+          >
+            {category.label}
+          </button>
+        ))}
+      </div>
+
       <div className="space-y-12">
-        {projects.map((proj, index) => (
+        {filteredProjects.map((proj, index) => (
           <motion.div
             key={proj.title}
             variants={fadeUpLg}
