@@ -1,5 +1,6 @@
 'use client';
 
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { ExternalLink, Github, Check, AlertCircle, TrendingUp } from 'lucide-react';
 import SectionContainer from '@/components/ui/SectionContainer';
@@ -12,7 +13,15 @@ interface ProjectsProps {
   projects: Project[];
 }
 
-const projectCategories = {
+type CategoryKey = 'all' | 'dataAnalysis' | 'portafolios' | 'businessManagement';
+
+interface CategoryConfig {
+  label: string;
+  color: string;
+  ids: string[];
+}
+
+const projectCategories: Record<string, CategoryConfig> = {
   dataAnalysis: {
     label: '(Análisis de Datos)',
     color: '#f472b6',
@@ -31,22 +40,40 @@ const projectCategories = {
 };
 
 export default function Projects({ i18n, projects }: ProjectsProps) {
-  const allProjectIds = Object.values(projectCategories).flatMap((cat) => cat.ids);
-  const filteredProjects = projects.filter((proj) => allProjectIds.includes(proj.id));
+  const [activeCategory, setActiveCategory] = useState<CategoryKey>('all');
+
+  const filteredProjects = activeCategory === 'all'
+    ? projects
+    : projects.filter((proj) => projectCategories[activeCategory].ids.includes(proj.id));
+
+  const tabBase = 'px-6 py-2.5 rounded-full font-mono text-sm uppercase tracking-wider transition-all duration-300 border focus:outline-none focus:ring-2';
+  const tabInactive = 'border-sky-400/20 hover:border-sky-400/40 hover:bg-sky-400/5 hover:scale-105 focus:ring-sky-400/50';
+  const tabActiveColor = 'border-white/30 scale-105';
 
   return (
     <SectionContainer sectionNumber="04" title={i18n.PROJECTS_TITLE} id="projects">
       <p className="text-slate-500 text-sm mb-10 font-mono text-center">{i18n.PROJECTS_SUBTITLE}</p>
 
-      {/* Project Filter Tabs */}
       <div className="flex flex-wrap justify-center gap-3 mb-16">
+        <button
+          onClick={() => setActiveCategory('all')}
+          className={`${tabBase} ${activeCategory === 'all' ? tabActiveColor : tabInactive}`}
+          style={{
+            color: activeCategory === 'all' ? '#fff' : '#94a3b8',
+            backgroundColor: activeCategory === 'all' ? 'rgba(56, 189, 248, 0.15)' : 'rgba(8, 8, 12, 0.6)',
+            backdropFilter: 'blur(8px)',
+          }}
+        >
+          Todos
+        </button>
         {Object.entries(projectCategories).map(([key, category]) => (
           <button
             key={key}
-            className="px-6 py-2.5 rounded-full font-mono text-sm uppercase tracking-wider transition-all duration-300 border border-sky-400/20 hover:border-sky-400/40 hover:bg-sky-400/5 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-sky-400/50"
+            onClick={() => setActiveCategory(key as CategoryKey)}
+            className={`${tabBase} ${activeCategory === key ? tabActiveColor : tabInactive}`}
             style={{ 
-              color: category.color,
-              backgroundColor: 'rgba(8, 8, 12, 0.6)',
+              color: activeCategory === key ? category.color : `${category.color}80`,
+              backgroundColor: activeCategory === key ? `${category.color}15` : 'rgba(8, 8, 12, 0.6)',
               backdropFilter: 'blur(8px)',
             }}
           >
