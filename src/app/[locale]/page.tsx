@@ -30,7 +30,7 @@ export default async function Page({
     { id: 'about', label: i18n.NAV_ABOUT },
     { id: 'education', label: i18n.NAV_EDUCATION },
     { id: 'experience', label: i18n.NAV_EXPERIENCE },
-    { id: 'projects', label: i18n.PROJECTS_TITLE },
+    { id: 'projects', label: i18n.PROJECTS_TITLE, href: `/${locale}/projects` },
     { id: 'skills', label: i18n.NAV_SKILLS_MAP },
     { id: 'contact', label: i18n.NAV_CONTACT },
   ];
