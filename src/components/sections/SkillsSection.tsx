@@ -49,7 +49,7 @@ export default function SkillsSection({ i18n, skills, techNodes }: SkillsSection
 
   return (
     <div className="py-16">
-      <SectionContainer sectionNumber="05" title={i18n.SKILLS_MAP_TITLE} id="skills">
+      <SectionContainer sectionNumber="04" title={i18n.SKILLS_MAP_TITLE} id="skills">
         {isMobile ? (
           <TerminalSkills {...skillsProps} />
         ) : (
