@@ -7,7 +7,6 @@ import Dashboard from '@/components/sections/Dashboard';
 import About from '@/components/sections/About';
 import Education from '@/components/sections/Education';
 import Experience from '@/components/sections/Experience';
-import ProjectsBanner from '@/components/sections/ProjectsBanner';
 import SkillsSection from '@/components/sections/SkillsSection';
 import Contact from '@/components/sections/Contact';
 
@@ -22,7 +21,7 @@ export default async function Page({
 }) {
   const { locale } = await params;
   const i18n = getI18n(locale as Locale);
-  const { techNodes, skills, projects, experience, certs, dockItems } = getPortfolioData(i18n);
+  const { techNodes, skills, experience, certs } = getPortfolioData(i18n);
   const langPrefix = locale === 'es' ? '' : `/${locale}`;
 
   const navItems = [
@@ -30,7 +29,6 @@ export default async function Page({
     { id: 'about', label: i18n.NAV_ABOUT },
     { id: 'education', label: i18n.NAV_EDUCATION },
     { id: 'experience', label: i18n.NAV_EXPERIENCE },
-    { id: 'projects', label: i18n.PROJECTS_TITLE, href: `${langPrefix}/projects` },
     { id: 'skills', label: i18n.NAV_SKILLS_MAP },
     { id: 'contact', label: i18n.NAV_CONTACT },
   ];
@@ -45,7 +43,6 @@ export default async function Page({
         <About i18n={i18n} />
         <Education i18n={i18n} certs={certs} />
         <Experience i18n={i18n} experience={experience} />
-        <ProjectsBanner i18n={i18n} langPrefix={langPrefix} />
         <SkillsSection i18n={i18n} skills={skills} techNodes={techNodes} />
         <Contact i18n={i18n} />
       </main>
