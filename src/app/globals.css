@@ -70,14 +70,14 @@ body {
    100% { transform: scale(1.4); opacity: 0; }
  }
 
- /* Custom cyberpunk arrow cursor */
+ /* Custom cyberpunk arrow cursor — classic arrow shape */
  body {
-   cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path d="M16,1 L16,10 L22,10 L16,16 L18,18 L24,12 L18,6 L16,8 L10,2 L10,12 L3,12 L10,12 L6,16 L8,18 L2,12 L8,6 L10,8 Z" fill="%2300ff00" stroke="%2300cc00" stroke-width="1.5"/></svg>') 16 16, default;
+   cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path d="M4,4 L4,24 L10,18 L18,28 L22,24 L14,14 L26,14 L26,8 Z" fill="%2300ff00" stroke="%2300cc00" stroke-width="1.5"/></svg>') 4 4, default;
  }
  
- /* Arrow cursor for interactive elements */
+ /* Classic hand pointer for interactive elements */
  a:hover, button:hover, [role="button"]:hover, [role="button"]:hover * {
-   cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path d="M16,1 L16,10 L22,10 L16,16 L18,18 L24,12 L18,6 L16,8 L10,2 L10,12 L3,12 L10,12 L6,16 L8,18 L2,12 L8,6 L10,8 Z" fill="%2300ff00" stroke="%2300cc00" stroke-width="1.5"/> <path d="M20,12 L16,16 L20,20" fill="%2300ff00" stroke="%2300cc00" stroke-width="1.5"/></svg>') 16 16, pointer;
+   cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path d="M16,4 L16,14 C16,14 15,13 14,13 C13,13 12,14 12,15 L12,18 C12,18 9,16 8,16 C7,16 6,17 6,18 C6,19 8,22 8,22 C8,22 9,26 11,28 C12,29 14,30 17,30 L22,30 C25,30 27,28 27,25 L27,16 C27,15 26,14 25,14 C24,14 23,15 23,16 L23,13 C23,12 22,11 21,11 C20,11 19,12 19,13 L19,10 C19,9 18,8 17,8 C16,8 16,9 16,10 Z" fill="%2300ff00" stroke="%2300cc00" stroke-width="1.5"/></svg>') 16 4, pointer;
  }
 
  .cyberpunk-link {

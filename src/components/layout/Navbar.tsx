@@ -3,10 +3,16 @@
 import { useEffect, useState } from 'react';
 import type { Locale } from '@/i18n';
 
+interface NavItem {
+  id: string;
+  label: string;
+  href?: string;
+}
+
 interface NavbarProps {
   locale: Locale;
   langPrefix: string;
-  navItems: { id: string; label: string }[];
+  navItems: NavItem[];
 }
 
 export default function Navbar({ locale, langPrefix, navItems }: NavbarProps) {
@@ -35,7 +41,7 @@ export default function Navbar({ locale, langPrefix, navItems }: NavbarProps) {
           {navItems.map((item) => (
             <a
               key={item.id}
-              href={`#${item.id}`}
+              href={item.href ?? `#${item.id}`}
               className="text-[10px] sm:text-xs text-slate-400 hover:text-sky-400 transition-colors font-mono uppercase tracking-wider no-underline shrink-0"
             >
               {item.label}

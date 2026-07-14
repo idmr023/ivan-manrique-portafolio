@@ -213,5 +213,8 @@
     "SEARCH_EMPTY": "No results found.",
     "SEARCH_HINT": "Press Ctrl+K to search",
 
-    "NOTFOUND_404": "404, Page Not Found"
+    "NOTFOUND_404": "404, Page Not Found",
+
+    "PROJECTS_VIEW_ALL": "View All Projects",
+    "PROJECTS_SNEAK_PEEK": "A look at my work"
 }
