@@ -11,6 +11,7 @@ import type { Project } from '@/lib/data';
 interface ProjectsProps {
   i18n: Record<string, string>;
   projects: Project[];
+  standalone?: boolean;
 }
 
 type CategoryKey = 'all' | 'dataAnalysis' | 'portafolios' | 'businessManagement';
@@ -39,7 +40,7 @@ const projectCategories: Record<string, CategoryConfig> = {
   },
 };
 
-export default function Projects({ i18n, projects }: ProjectsProps) {
+export default function Projects({ i18n, projects, standalone }: ProjectsProps) {
   const [activeCategory, setActiveCategory] = useState<CategoryKey>('all');
 
   const filteredProjects = useMemo(() => {
@@ -53,8 +54,8 @@ export default function Projects({ i18n, projects }: ProjectsProps) {
   const tabInactive = 'border-sky-400/20 hover:border-sky-400/40 hover:bg-sky-400/5 hover:scale-105 focus:ring-sky-400/50';
   const tabActiveColor = 'border-white/30 scale-105';
 
-  return (
-    <SectionContainer sectionNumber="04" title={i18n.PROJECTS_TITLE} id="projects">
+  const content = (
+    <>
       <p className="text-slate-500 text-sm mb-10 font-mono text-center">{i18n.PROJECTS_SUBTITLE}</p>
 
       <div className="flex flex-wrap justify-center gap-3 mb-16">
@@ -186,6 +187,14 @@ export default function Projects({ i18n, projects }: ProjectsProps) {
           ))}
         </AnimatePresence>
       </div>
+    </>
+  );
+
+  if (standalone) return <div className="max-w-5xl mx-auto px-4 sm:px-6">{content}</div>;
+
+  return (
+    <SectionContainer sectionNumber="04" title={i18n.PROJECTS_TITLE} id="projects">
+      {content}
     </SectionContainer>
   );
 }

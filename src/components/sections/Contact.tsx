@@ -12,7 +12,7 @@ interface ContactProps {
 
 export default function Contact({ i18n }: ContactProps) {
   return (
-    <SectionContainer sectionNumber="05" title={i18n.CONTACT_TITLE} id="contact">
+    <SectionContainer sectionNumber="06" title={i18n.CONTACT_TITLE} id="contact">
       <motion.div
         initial="hidden"
         whileInView="show"
