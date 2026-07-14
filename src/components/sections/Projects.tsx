@@ -12,35 +12,27 @@ interface ProjectsProps {
   projects: Project[];
 }
 
-// Project categories based on purpose (Spanish labels as requested)
 const projectCategories = {
   dataAnalysis: {
     label: '(Análisis de Datos)',
     color: '#f472b6',
-    projects: ['Limpieza y Análisis de Redes Sociales', 'CX Metrics Analysis — Teleperformance', 'Commercial Tracking Dashboard BI'],
+    ids: ['commercial-bi', 'cx-metrics', 'social-eda'],
   },
-  portfolios: {
+  portafolios: {
     label: '(Portafolios)',
     color: '#38bdf8',
-    projects: ['Mi Portafolio', 'Portafolio Abogado', 'Portafolio Ana'],
+    ids: ['law-firm'],
   },
   businessManagement: {
     label: '(Sistemas de Gestión Comercial)',
     color: '#f59e0b',
-    projects: ['Custom ERP System — Ripnel', 'Sistema de Gestión Jurídica', 'MultiSaaS', 'Ollas Comunes'],
+    ids: ['ripnel', 'ollas-comunes'],
   },
 };
 
 export default function Projects({ i18n, projects }: ProjectsProps) {
-  // Filter projects based on category
-  const filteredProjects = projects.filter((proj) => {
-    const allProjects = [
-      ...projectCategories.dataAnalysis.projects,
-      ...projectCategories.portfolios.projects,
-      ...projectCategories.businessManagement.projects,
-    ];
-    return allProjects.includes(proj.title);
-  });
+  const allProjectIds = Object.values(projectCategories).flatMap((cat) => cat.ids);
+  const filteredProjects = projects.filter((proj) => allProjectIds.includes(proj.id));
 
   return (
     <SectionContainer sectionNumber="04" title={i18n.PROJECTS_TITLE} id="projects">
@@ -66,7 +58,7 @@ export default function Projects({ i18n, projects }: ProjectsProps) {
       <div className="space-y-12">
         {filteredProjects.map((proj, index) => (
           <motion.div
-            key={proj.title}
+            key={proj.id}
             variants={fadeUpLg}
             initial="hidden"
             whileInView="show"

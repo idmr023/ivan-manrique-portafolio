@@ -18,6 +18,7 @@ export interface TechNode {
 }
 
 export interface Project {
+  id: string;
   title: string;
   problem: string;
   desc: string;
@@ -98,6 +99,7 @@ export function getPortfolioData(i18n: Record<string, string>) {
 
   const projects: Project[] = [
     {
+      id: 'ripnel',
       title: i18n.PROJ_RIPNEL_TITLE,
       problem: i18n.PROJ_RIPNEL_PROBLEM,
       desc: i18n.PROJ_RIPNEL_DESC,
@@ -109,6 +111,7 @@ export function getPortfolioData(i18n: Record<string, string>) {
       featured: true,
     },
     {
+      id: 'commercial-bi',
       title: i18n.PROJ_COMMERCIAL_BI_TITLE,
       problem: i18n.PROJ_COMMERCIAL_BI_PROBLEM,
       desc: i18n.PROJ_COMMERCIAL_BI_DESC,
@@ -120,6 +123,7 @@ export function getPortfolioData(i18n: Record<string, string>) {
       featured: false,
     },
     {
+      id: 'cx-metrics',
       title: i18n.PROJ_CX_METRICS_TITLE,
       problem: i18n.PROJ_CX_METRICS_PROBLEM,
       desc: i18n.PROJ_CX_METRICS_DESC,
@@ -131,6 +135,7 @@ export function getPortfolioData(i18n: Record<string, string>) {
       featured: false,
     },
     {
+      id: 'social-eda',
       title: i18n.PROJ_SOCIAL_EDA_TITLE,
       problem: i18n.PROJ_SOCIAL_EDA_PROBLEM,
       desc: i18n.PROJ_SOCIAL_EDA_DESC,
@@ -142,6 +147,7 @@ export function getPortfolioData(i18n: Record<string, string>) {
       featured: false,
     },
     {
+      id: 'law-firm',
       title: i18n.PROJ_LAW_FIRM_TITLE,
       problem: i18n.PROJ_LAW_FIRM_PROBLEM,
       desc: i18n.PROJ_LAW_FIRM_DESC,
@@ -153,6 +159,7 @@ export function getPortfolioData(i18n: Record<string, string>) {
       featured: false,
     },
     {
+      id: 'ollas-comunes',
       title: 'Ollas Comunes',
       problem: 'Las ollas comunes enfrentan desafíos en: registro y seguimiento de beneficiarios, control de inventario de insumos, planificación de menús y recetas, trazabilidad de entregas de comida, coordinación entre organizaciones y distritos.',
       desc: 'SIGO-OLLAS es un Sistema de Gestión de Ollas Comunes diseñado para digitalizar y optimizar la administración de sopas comunitarias en Perú. El sistema permite gestionar organizaciones, ollas comunes, beneficiarios, inventarios, recetas, menús, entregas de comida y generar recomendaciones inteligentes para mejorar la operación diaria. Arquitectura Multi-Tenant (SaaS) con aislamiento de datos garantizado por Row Level Security (RLS). Cada organización gestiona sus propias ollas comunes, beneficiarios y recursos.',
