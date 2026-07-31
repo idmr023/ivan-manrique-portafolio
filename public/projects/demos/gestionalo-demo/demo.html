@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestionalo CMS — Demo Interactiva</title>
+    <style>
+        :root {
+            --primary: #0F172A;
+            --accent: #EA580C;
+            --accent-hover: #C2410C;
+            --surface: #FAFAFA;
+            --border: rgba(15, 23, 42, 0.08);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background: var(--surface);
+            color: var(--primary);
+            line-height: 1.5;
+        }
+        .hidden { display: none !important; }
+
+        /* ── Login ── */
+        #login-screen {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #0F172A 0%, #1a2332 100%);
+            padding: 2rem;
+        }
+        #login-screen .card {
+            background: white;
+            padding: 3rem 2.5rem;
+            width: 100%;
+            max-width: 400px;
+            border: 1px solid var(--border);
+        }
+        #login-screen .logo {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        #login-screen .logo h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.75rem;
+            color: var(--primary);
+            letter-spacing: -0.02em;
+        }
+        #login-screen .logo span {
+            font-size: 0.75rem;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 0.3em;
+            font-weight: 600;
+        }
+        #login-screen .field {
+            margin-bottom: 1.25rem;
+        }
+        #login-screen label {
+            display: block;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 0.4rem;
+        }
+        #login-screen input {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 1px solid var(--border);
+            font-size: 0.9rem;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+        #login-screen input:focus { border-color: var(--accent); }
+        #login-screen button {
+            width: 100%;
+            padding: 0.85rem;
+            background: var(--accent);
+            color: white;
+            border: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+            margin-top: 0.5rem;
+        }
+        #login-screen button:hover { background: var(--accent-hover); }
+        #login-screen .hint {
+            text-align: center;
+            margin-top: 1.5rem;
+            font-size: 0.75rem;
+            color: rgba(15, 23, 42, 0.4);
+        }
+
+        /* ── Admin Layout ── */
+        #admin-screen {
+            display: flex;
+            min-height: 100vh;
+        }
+        .sidebar {
+            width: 260px;
+            background: var(--primary);
+            color: white;
+            padding: 2rem 0;
+            display: flex;
+            flex-direction: column;
+            flex-shrink: 0;
+        }
+        .sidebar .logo {
+            padding: 0 1.5rem 1.5rem;
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+            margin-bottom: 1rem;
+        }
+        .sidebar .logo h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+        .sidebar .logo small {
+            color: rgba(255,255,255,0.4);
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+        }
+        .sidebar nav a {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.75rem 1.5rem;
+            color: rgba(255,255,255,0.6);
+            text-decoration: none;
+            font-size: 0.85rem;
+            transition: all 0.2s;
+            border-left: 3px solid transparent;
+            cursor: pointer;
+        }
+        .sidebar nav a:hover { color: white; background: rgba(255,255,255,0.04); }
+        .sidebar nav a.active {
+            color: white;
+            background: rgba(234, 88, 12, 0.15);
+            border-left-color: var(--accent);
+        }
+        .sidebar .badge {
+            margin-left: auto;
+            background: var(--accent);
+            color: white;
+            font-size: 0.65rem;
+            padding: 0.15rem 0.5rem;
+            font-weight: 600;
+        }
+
+        .main-content {
+            flex: 1;
+            padding: 2rem 2.5rem;
+            overflow-y: auto;
+        }
+        .main-content h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.5rem;
+            margin-bottom: 0.25rem;
+        }
+        .main-content .sub {
+            color: rgba(15,23,42,0.5);
+            font-size: 0.85rem;
+            margin-bottom: 2rem;
+        }
+        .main-content .bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.6rem 1.25rem;
+            font-size: 0.8rem;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-decoration: none;
+            background: var(--accent);
+            color: white;
+        }
+        .btn:hover { background: var(--accent-hover); }
+        .btn-outline {
+            background: transparent;
+            color: var(--primary);
+            border: 1px solid var(--border);
+        }
+        .btn-outline:hover { border-color: var(--accent); color: var(--accent); }
+        .btn-sm { padding: 0.4rem 0.9rem; font-size: 0.75rem; }
+        .btn-ghost { background: transparent; color: rgba(15,23,42,0.5); border: none; }
+        .btn-ghost:hover { color: var(--accent); }
+        .btn-danger { background: #DC2626; }
+        .btn-danger:hover { background: #B91C1C; }
+
+        /* ── Cards / Grid ── */
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.25rem;
+        }
+        .card {
+            background: white;
+            border: 1px solid var(--border);
+            padding: 1.5rem;
+        }
+        .card .thumb {
+            width: 100%;
+            height: 150px;
+            background: var(--surface);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: rgba(15,23,42,0.1);
+            margin-bottom: 1rem;
+            border: 1px solid var(--border);
+        }
+        .card h4 { font-size: 1rem; margin-bottom: 0.3rem; }
+        .card p { font-size: 0.8rem; color: rgba(15,23,42,0.5); margin-bottom: 0.75rem; }
+
+        /* ── Table ── */
+        .table-wrap {
+            background: white;
+            border: 1px solid var(--border);
+            overflow-x: auto;
+        }
+        table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+        th, td { padding: 0.85rem 1rem; text-align: left; border-bottom: 1px solid var(--border); }
+        th { background: var(--surface); font-weight: 600; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: rgba(15,23,42,0.5); }
+        td .tag {
+            display: inline-block;
+            font-size: 0.65rem;
+            padding: 0.15rem 0.55rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        .tag-published { background: #D1FAE5; color: #065F46; }
+        .tag-draft { background: #FEF3C7; color: #92400E; }
+
+        /* ── Modal ── */
+        .modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            padding: 2rem;
+        }
+        .modal {
+            background: white;
+            width: 100%;
+            max-width: 560px;
+            padding: 2rem;
+            border: 1px solid var(--border);
+        }
+        .modal h3 { font-size: 1.15rem; margin-bottom: 0.25rem; }
+        .modal .field { margin-bottom: 1rem; }
+        .modal label { display: block; font-size: 0.8rem; font-weight: 600; margin-bottom: 0.3rem; }
+        .modal input, .modal textarea, .modal select {
+            width: 100%;
+            padding: 0.6rem 0.85rem;
+            border: 1px solid var(--border);
+            font-size: 0.85rem;
+            outline: none;
+            font-family: inherit;
+        }
+        .modal input:focus, .modal textarea:focus { border-color: var(--accent); }
+        .modal textarea { resize: vertical; min-height: 80px; }
+        .modal .actions {
+            display: flex;
+            gap: 0.75rem;
+            justify-content: flex-end;
+            margin-top: 1.5rem;
+        }
+
+        /* ── Blog + AI Demo ── */
+        .blog-card {
+            background: white;
+            border: 1px solid var(--border);
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .blog-card h4 { font-size: 1rem; }
+        .blog-card .meta { font-size: 0.75rem; color: rgba(15,23,42,0.4); margin: 0.3rem 0 0.6rem; }
+        .blog-card p { font-size: 0.85rem; color: rgba(15,23,42,0.6); }
+        .blog-card .ai-bar { margin-top: 1rem; display: flex; gap: 0.5rem; flex-wrap: wrap; }
+        .summary-box {
+            margin-top: 0.75rem;
+            padding: 1rem;
+            background: rgba(234,88,12,0.05);
+            border-left: 3px solid var(--accent);
+            font-size: 0.85rem;
+            display: none;
+        }
+        .summary-box.show { display: block; }
+        .summary-box .status {
+            font-size: 0.75rem;
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        /* ── Dashboard Stats ── */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        .stat {
+            background: white;
+            border: 1px solid var(--border);
+            padding: 1.5rem;
+        }
+        .stat .num {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--accent);
+        }
+        .stat .label { font-size: 0.8rem; color: rgba(15,23,42,0.5); margin-top: 0.2rem; }
+        .stat .note { font-size: 0.7rem; color: rgba(15,23,42,0.3); margin-top: 0.5rem; }
+
+        .section-view:not(.hidden) + .section-view { margin-top: 0; }
+        .ai-feature-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            background: rgba(234,88,12,0.1);
+            color: var(--accent);
+            font-size: 0.65rem;
+            padding: 0.2rem 0.6rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* ── Responsive ── */
+        @media (max-width: 768px) {
+            .sidebar { width: 60px; overflow: hidden; }
+            .sidebar .logo h2, .sidebar .logo small, .sidebar nav a span, .sidebar .badge { display: none; }
+            .sidebar nav a { justify-content: center; padding: 0.75rem; }
+            .main-content { padding: 1.5rem; }
+            .grid-3 { grid-template-columns: 1fr; }
+            #login-screen .card { padding: 2rem 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ────────────── LOGIN ────────────── -->
+<div id="login-screen">
+    <div class="card">
+        <div class="logo">
+            <h1>gestionalo</h1>
+            <span>Panel de Administración</span>
+        </div>
+        <div class="field">
+            <label>Correo electrónico</label>
+            <input type="email" id="demo-email" value="admin@gestionalo.pe" placeholder="admin@gestionalo.pe">
+        </div>
+        <div class="field">
+            <label>Contraseña</label>
+            <input type="password" id="demo-pass" value="gestionalo2024" placeholder="••••••••">
+        </div>
+        <button onclick="login()">Ingresar al Panel</button>
+        <p class="hint">Demo — haz clic en ingresar para explorar el panel</p>
+    </div>
+</div>
+
+<!-- ────────────── ADMIN PANEL ────────────── -->
+<div id="admin-screen" class="hidden">
+    <aside class="sidebar">
+        <div class="logo">
+            <h2>gestionalo</h2>
+            <small>CMS v2.0 · Demo</small>
+        </div>
+        <nav>
+            <a onclick="showView('dashboard')" class="active" data-view="dashboard">
+                📊 <span>Dashboard</span>
+            </a>
+            <a onclick="showView('services')" data-view="services">
+                ⚙️ <span>Servicios</span>
+            </a>
+            <a onclick="showView('projects')" data-view="projects">
+                🏗️ <span>Proyectos</span>
+            </a>
+            <a onclick="showView('blog')" data-view="blog">
+                📝 <span>Blog</span>
+                <span class="badge">IA</span>
+            </a>
+            <a onclick="showView('categories')" data-view="categories">
+                🏷️ <span>Categorías</span>
+            </a>
+            <a onclick="showView('contacts')" data-view="contacts">
+                ✉️ <span>Contactos</span>
+                <span class="badge">3</span>
+            </a>
+            <a onclick="showView('citas')" data-view="citas">
+                📅 <span>Citas</span>
+                <span class="badge">2</span>
+            </a>
+        </nav>
+    </aside>
+
+    <div class="main-content">
+
+        <!-- Dashboard -->
+        <div id="view-dashboard" class="section-view">
+            <h2>Dashboard</h2>
+            <p class="sub">Resumen general del contenido de tu plataforma.</p>
+            <div class="stats">
+                <div class="stat"><div class="num">6</div><div class="label">Servicios activos</div><div class="note">2 en edición</div></div>
+                <div class="stat"><div class="num">7</div><div class="label">Proyectos publicados</div><div class="note">+1 este mes</div></div>
+                <div class="stat"><div class="num">12</div><div class="label">Artículos en blog</div><div class="note">3 borradores</div></div>
+                <div class="stat"><div class="num">2</div><div class="label">Citas pendientes</div><div class="note">Esperando confirmación</div></div>
+            </div>
+            <p style="font-size:0.85rem;color:rgba(15,23,42,0.4);"><strong>Demo visual</strong> — Los números son estáticos, solo ilustran el panel real.</p>
+        </div>
+
+        <!-- Servicios -->
+        <div id="view-services" class="section-view hidden">
+            <div class="bar">
+                <div><h2>Servicios</h2><p class="sub">Gestiona los servicios que se muestran en la landing page.</p></div>
+                <button class="btn" onclick="openModal('add-service')">+ Nuevo servicio</button>
+            </div>
+            <div class="grid-3">
+                <div class="card">
+                    <div class="thumb">🏛️</div>
+                    <h4>Arquitectura Legal</h4>
+                    <p>Asesoría normativa, declaratoria de fábrica, independización y licencias de construcción.</p>
+                    <button class="btn btn-sm btn-outline" onclick="openModal('edit-service')">Editar</button>
+                </div>
+                <div class="card">
+                    <div class="thumb">🔧</div>
+                    <h4>Inspección Técnica (ITSE)</h4>
+                    <p>Inspecciones técnicas de seguridad en edificaciones, certificaciones y conformidad de obra.</p>
+                    <button class="btn btn-sm btn-outline" onclick="openModal('edit-service')">Editar</button>
+                </div>
+                <div class="card">
+                    <div class="thumb">🏗️</div>
+                    <h4>Diseño Estructural</h4>
+                    <p>Cálculo estructural, planos de cimentación y memorias descriptivas para proyectos industriales.</p>
+                    <button class="btn btn-sm btn-outline" onclick="openModal('edit-service')">Editar</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Proyectos -->
+        <div id="view-projects" class="section-view hidden">
+            <div class="bar">
+                <div><h2>Proyectos</h2><p class="sub">Portafolio de proyectos ejecutados con galería de imágenes.</p></div>
+                <button class="btn" onclick="openModal('add-project')">+ Nuevo proyecto</button>
+            </div>
+            <div class="grid-3">
+                <div class="card">
+                    <div class="thumb">🏭</div>
+                    <h4>RESITER</h4>
+                    <p>Planta Industrial — Inspección y Licenciamiento</p>
+                    <button class="btn btn-sm btn-outline" onclick="openModal('edit-project')">Editar</button>
+                </div>
+                <div class="card">
+                    <div class="thumb">🦷</div>
+                    <h4>MULTIDENT</h4>
+                    <p>Consultorio Dental — Licenciamiento Sanitario</p>
+                    <button class="btn btn-sm btn-outline" onclick="openModal('edit-project')">Editar</button>
+                </div>
+                <div class="card">
+                    <div class="thumb">📐</div>
+                    <h4>Proyecto Vista Industrial</h4>
+                    <p>Diseño y Renderizado 3D de Complejo Industrial</p>
+                    <button class="btn btn-sm btn-outline" onclick="openModal('edit-project')">Editar</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Blog -->
+        <div id="view-blog" class="section-view hidden">
+            <div class="bar">
+                <div><h2>Blog <span class="ai-feature-badge">🤖 IA Integrada</span></h2><p class="sub">Artículos informativos. Cada uno puede escucharse o resumirse automáticamente con inteligencia artificial.</p></div>
+                <button class="btn" onclick="openModal('add-post')">+ Nuevo artículo</button>
+            </div>
+
+            <div class="blog-card">
+                <h4>Nuevas normas técnicas para edificaciones industriales 2026</h4>
+                <div class="meta">13 jul 2026 · Categoría: Normativa · <span class="tag tag-published">Publicado</span></div>
+                <p>El Ministerio de Vivienda ha actualizado el Reglamento Nacional de Edificaciones con nuevos estándares de seguridad estructural para naves industriales y almacenes de gran altura...</p>
+                <div class="ai-bar">
+                    <button class="btn btn-sm btn-outline" onclick="toggleSummary(this)">🎧 Escuchar resumen</button>
+                    <button class="btn btn-sm btn-outline" onclick="toggleSummary(this)">🤖 Resumir con IA</button>
+                </div>
+                <div class="summary-box">
+                    <div class="status">⏳ Generando resumen con IA...</div>
+                    <div class="summary-content hidden">El artículo describe las actualizaciones del RNE 2026 que exigen nuevos refuerzos estructurales en naves industriales, mayor separación entre almacenes y sistemas contra incendios mejorados. Las empresas tienen 18 meses para adecuar sus instalaciones.</div>
+                </div>
+            </div>
+
+            <div class="blog-card">
+                <h4>¿Cómo obtener la Declaratoria de Fábrica en Lima?</h4>
+                <div class="meta">28 jun 2026 · Categoría: Guías · <span class="tag tag-published">Publicado</span></div>
+                <p>La Declaratoria de Fábrica es el documento municipal que acredita legalmente la existencia de una edificación. Te explicamos paso a paso el proceso, requisitos y tiempos estimados para Lima Metropolitana...</p>
+                <div class="ai-bar">
+                    <button class="btn btn-sm btn-outline" onclick="toggleSummary(this)">🎧 Escuchar resumen</button>
+                    <button class="btn btn-sm btn-outline" onclick="toggleSummary(this)">🤖 Resumir con IA</button>
+                </div>
+                <div class="summary-box">
+                    <div class="status">⏳ Generando resumen con IA...</div>
+                    <div class="summary-content hidden">Guía completa del trámite de Declaratoria de Fábrica en Lima: requisitos documentales, plazos de 30 a 60 días hábiles, costos aproximados y recomendaciones para evitar observaciones municipales.</div>
+                </div>
+            </div>
+
+            <div class="blog-card">
+                <h4>ITSE: Inspección Técnica de Seguridad en Edificaciones</h4>
+                <div class="meta">15 jun 2026 · Categoría: Servicios · <span class="tag tag-draft">Borrador</span></div>
+                <p>La ITSE es un requisito obligatorio para locales comerciales, industriales y de servicios. Conoce los niveles de riesgo, la documentación necesaria y cómo preparar tu edificio para la inspección...</p>
+                <div class="ai-bar">
+                    <button class="btn btn-sm btn-outline" onclick="toggleSummary(this)">🎧 Escuchar resumen</button>
+                    <button class="btn btn-sm btn-outline" onclick="toggleSummary(this)">🤖 Resumir con IA</button>
+                </div>
+                <div class="summary-box">
+                    <div class="status">⏳ Generando resumen con IA...</div>
+                    <div class="summary-content hidden">Resumen del proceso ITSE: clasificación de riesgo (alto, medio, bajo), documentación técnica requerida, inspección in situ y certificación final. Vigencia de 2 años para riesgo medio y bajo.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Categorías -->
+        <div id="view-categories" class="section-view hidden">
+            <div class="bar">
+                <div><h2>Categorías</h2><p class="sub">Organiza los artículos del blog por temas.</p></div>
+                <button class="btn" onclick="openModal('add-category')">+ Nueva categoría</button>
+            </div>
+            <div class="table-wrap">
+                <table>
+                    <thead><tr><th>Nombre</th><th>Slug</th><th>Artículos</th><th></th></tr></thead>
+                    <tbody>
+                        <tr><td>Normativa</td><td>normativa</td><td>4</td><td><button class="btn btn-sm btn-ghost" onclick="openModal('edit-category')">✏️</button></td></tr>
+                        <tr><td>Guías</td><td>guias</td><td>3</td><td><button class="btn btn-sm btn-ghost" onclick="openModal('edit-category')">✏️</button></td></tr>
+                        <tr><td>Servicios</td><td>servicios</td><td>2</td><td><button class="btn btn-sm btn-ghost" onclick="openModal('edit-category')">✏️</button></td></tr>
+                        <tr><td>Proyectos</td><td>proyectos</td><td>3</td><td><button class="btn btn-sm btn-ghost" onclick="openModal('edit-category')">✏️</button></td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Contactos -->
+        <div id="view-contacts" class="section-view hidden">
+            <div class="bar"><div><h2>Contactos</h2><p class="sub">Mensajes recibidos desde el formulario de contacto público.</p></div></div>
+            <div class="table-wrap">
+                <table>
+                    <thead><tr><th>Nombre</th><th>Email</th><th>Teléfono</th><th>Mensaje</th><th>Fecha</th></tr></thead>
+                    <tbody>
+                        <tr><td>Carlos Mendoza</td><td>carlos@ejemplo.pe</td><td>999 111 222</td><td>Consulta sobre licencia para taller mecánico...</td><td>29 jul 2026</td></tr>
+                        <tr><td>María Torres</td><td>maria@ejemplo.pe</td><td>988 777 666</td><td>Requiero inspección ITSE para local comercial...</td><td>28 jul 2026</td></tr>
+                        <tr><td>Pedro Sánchez</td><td>pedro@ejemplo.pe</td><td>977 555 444</td><td>Solicito cotización para declaratoria de fábrica...</td><td>27 jul 2026</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Citas -->
+        <div id="view-citas" class="section-view hidden">
+            <div class="bar"><div><h2>Citas</h2><p class="sub">Visitas técnicas agendadas por los clientes desde la plataforma.</p></div></div>
+            <div class="table-wrap">
+                <table>
+                    <thead><tr><th>Cliente</th><th>Tipo</th><th>Fecha / Hora</th><th>Estado</th><th></th></tr></thead>
+                    <tbody>
+                        <tr><td>Carlos Mendoza</td><td>Visita Técnica - Diagnóstico</td><td>05 ago 2026 · 10:00 h</td><td><span class="tag tag-published">Confirmada</span></td><td><button class="btn btn-sm btn-danger" onclick="alert('Cita cancelada (demo).')">Cancelar</button></td></tr>
+                        <tr><td>María Torres</td><td>Saneamiento Predial</td><td>07 ago 2026 · 14:00 h</td><td><span class="tag tag-draft">Pendiente</span></td><td><button class="btn btn-sm btn-danger" onclick="alert('Cita cancelada (demo).')">Cancelar</button></td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ────────────── MODAL ────────────── -->
+<div id="modal-overlay" class="modal-overlay hidden" onclick="if(event.target===this)closeModal()">
+    <div class="modal" id="modal-body">
+        <h3 id="modal-title">Nuevo</h3>
+        <p class="sub" id="modal-sub" style="margin-bottom:1.25rem">Completa los campos para añadir contenido nuevo.</p>
+        <div id="modal-fields">
+            <div class="field"><label>Título</label><input type="text" placeholder="Título del elemento"></div>
+            <div class="field"><label>Descripción</label><textarea placeholder="Descripción..."></textarea></div>
+        </div>
+        <div class="actions">
+            <button class="btn btn-outline" onclick="closeModal()">Cancelar</button>
+            <button class="btn" onclick="closeModal();alert('✅ Guardado (simulación demo).')">Guardar</button>
+        </div>
+    </div>
+</div>
+
+<a href="/" style="position:fixed;top:8px;right:8px;z-index:999999;display:flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:12px;background:#000;border:2px solid rgba(255,255,255,0.6);box-shadow:0 4px 16px rgba(0,0,0,0.4);text-decoration:none;transition:all 0.15s" aria-label="Volver al portafolio">
+  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="white" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+</a>
+
+<script>
+    function login() {
+        document.getElementById('login-screen').classList.add('hidden');
+        document.getElementById('admin-screen').classList.remove('hidden');
+    }
+
+    function showView(id) {
+        document.querySelectorAll('.section-view').forEach(v => v.classList.add('hidden'));
+        document.getElementById('view-' + id).classList.remove('hidden');
+        document.querySelectorAll('.sidebar nav a').forEach(a => a.classList.remove('active'));
+        document.querySelector(`.sidebar nav a[data-view="${id}"]`).classList.add('active');
+    }
+
+    function openModal(type) {
+        const modal = document.getElementById('modal-overlay');
+        document.getElementById('modal-fields').innerHTML = '';
+        let fields = '';
+        const titles = {
+            'add-service': ['Nuevo servicio', 'Crea un servicio para mostrarlo en la landing page.'],
+            'edit-service': ['Editar servicio', 'Modifica los datos del servicio seleccionado.'],
+            'add-project': ['Nuevo proyecto', 'Agrega un proyecto al portafolio con su galería.'],
+            'edit-project': ['Editar proyecto', 'Actualiza la información y las imágenes del proyecto.'],
+            'add-post': ['Nuevo artículo', 'Redacta un artículo para el blog.'],
+            'edit-post': ['Editar artículo', 'Modifica el contenido del artículo.'],
+            'add-category': ['Nueva categoría', 'Crea una categoría para organizar los artículos.'],
+            'edit-category': ['Editar categoría', 'Cambia el nombre o la descripción de la categoría.']
+        };
+        const [title, sub] = titles[type] || ['Formulario', 'Completa los campos.'];
+        document.getElementById('modal-title').textContent = title;
+        document.getElementById('modal-sub').textContent = sub;
+        if (type.includes('service')) {
+            fields = `
+                <div class="field"><label>Título del servicio</label><input type="text" placeholder="Ej: Arquitectura Legal"></div>
+                <div class="field"><label>Descripción</label><textarea placeholder="Describe el servicio..."></textarea></div>
+                <div class="field"><label>Ícono (emoji)</label><input type="text" placeholder="🏛️" maxlength="2"></div>
+                <div class="field"><label>¿Activo?</label><select><option>Si</option><option>No</option></select></div>
+            `;
+        } else if (type.includes('project')) {
+            fields = `
+                <div class="field"><label>Título del proyecto</label><input type="text" placeholder="Ej: RESITER"></div>
+                <div class="field"><label>Subtítulo</label><input type="text" placeholder="Planta Industrial"></div>
+                <div class="field"><label>Descripción</label><textarea placeholder="Descripción del proyecto..."></textarea></div>
+                <div class="field"><label>Logotipo (imagen)</label><input type="file" accept="image/*"></div>
+                <div class="field"><label>Galería de imágenes</label><input type="file" accept="image/*" multiple></div>
+            `;
+        } else if (type.includes('post')) {
+            fields = `
+                <div class="field"><label>Título del artículo</label><input type="text" placeholder="Título del post"></div>
+                <div class="field"><label>Categoría</label><select><option>Normativa</option><option>Guías</option><option>Servicios</option><option>Proyectos</option></select></div>
+                <div class="field"><label>Contenido</label><textarea style="min-height:120px" placeholder="Escribe el contenido del artículo..."></textarea></div>
+                <div class="field"><label>Imagen destacada</label><input type="file" accept="image/*"></div>
+                <div class="field"><label>Estado</label><select><option>Publicado</option><option>Borrador</option></select></div>
+            `;
+        } else if (type.includes('category')) {
+            fields = `
+                <div class="field"><label>Nombre de la categoría</label><input type="text" placeholder="Ej: Normativa"></div>
+                <div class="field"><label>Descripción (opcional)</label><textarea placeholder="Descripción breve..."></textarea></div>
+            `;
+        }
+        document.getElementById('modal-fields').innerHTML = fields;
+        modal.classList.remove('hidden');
+    }
+
+    function closeModal() {
+        document.getElementById('modal-overlay').classList.add('hidden');
+    }
+
+    function toggleSummary(btn) {
+        const box = btn.closest('.blog-card').querySelector('.summary-box');
+        const content = box.querySelector('.summary-content');
+        const status = box.querySelector('.status');
+        if (box.classList.contains('show')) {
+            box.classList.remove('show');
+            return;
+        }
+        box.classList.add('show');
+        status.textContent = '⏳ Generando resumen con IA...';
+        status.style.display = 'block';
+        content.classList.add('hidden');
+        setTimeout(() => {
+            status.style.display = 'none';
+            content.classList.remove('hidden');
+        }, 1500);
+    }
+
+    // Enter key on login
+    document.addEventListener('keydown', e => {
+        if (e.key === 'Enter' && !document.getElementById('admin-screen').classList.contains('hidden')) return;
+        if (e.key === 'Enter') login();
+    });
+</script>
+
+</body>
+</html>

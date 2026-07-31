@@ -31,12 +31,12 @@ const projectCategories: Record<string, CategoryConfig> = {
   portafolios: {
     label: '(Portafolios)',
     color: '#38bdf8',
-    ids: ['law-firm'],
+    ids: ['law-firm', 'cosmetologia-yvette'],
   },
   businessManagement: {
     label: '(Sistemas de Gestión Comercial)',
     color: '#f59e0b',
-    ids: ['ripnel', 'ollas-comunes'],
+    ids: ['ripnel', 'ollas-comunes', 'gestionalo'],
   },
 };
 

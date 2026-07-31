@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Centro de Estética Yvette | Demo</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            gold: '#C9A227',
+            pastel: '#F5E6D3',
+            ink: '#0A0A0A',
+          },
+          minHeight: {
+            touch: '44px',
+          }
+        }
+      }
+    }
+  </script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-white text-ink antialiased">
+
+  <!-- Header -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-neutral-100">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+      <a href="#" class="flex items-center gap-2">
+        <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-gold/10 font-bold text-gold">Y</span>
+        <span class="font-semibold tracking-tight text-ink">Centro de Estética Yvette</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-neutral-600">
+        <a href="#servicios" class="hover:text-gold transition-colors">Servicios</a>
+        <a href="#nosotros" class="hover:text-gold transition-colors">Nosotros</a>
+        <a href="#contacto" class="hover:text-gold transition-colors">Contacto</a>
+      </nav>
+      <div class="flex items-center gap-3">
+        <a href="admin.html" class="inline-flex min-h-[44px] items-center justify-center rounded-xl border border-neutral-200 px-4 py-2 text-sm font-medium text-ink hover:bg-neutral-50 transition-colors">
+          Panel Admin (Demo)
+        </a>
+        <a href="#reservar" class="inline-flex min-h-[44px] items-center justify-center rounded-xl bg-ink px-5 py-2 text-sm font-medium text-white hover:bg-neutral-800 transition-colors">
+          Reservar Cita
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="relative flex min-h-[90vh] items-center overflow-hidden bg-gradient-to-b from-[#F5E6D3]/40 via-white to-white pt-24">
+      <div class="relative mx-auto grid w-full max-w-7xl gap-12 px-4 py-16 sm:px-6 lg:grid-cols-2 lg:items-center lg:gap-8 lg:px-8">
+        <div class="flex flex-col items-start gap-6">
+          <div class="inline-flex items-center gap-2 rounded-full border border-[#C9A227]/30 bg-[#C9A227]/5 px-4 py-1.5">
+            <i data-lucide="sparkles" class="h-4 w-4 text-[#C9A227]"></i>
+            <span class="text-sm font-medium text-[#C9A227]">Desde 2005 en Cercado de Lima</span>
+          </div>
+          <h1 class="text-4xl font-semibold leading-tight tracking-tight text-ink sm:text-5xl lg:text-6xl">
+            Belleza y estilo<br><span class="text-[#C9A227]">en cada detalle</span>
+          </h1>
+          <p class="max-w-md text-base leading-relaxed text-neutral-600 sm:text-lg">
+            Centro de Estética Yvette. Peluquería, color, laceados y tratamientos faciales con personal capacitado y tendencias actuales.
+          </p>
+          <div class="flex flex-col gap-3 sm:flex-row w-full sm:w-auto">
+            <a href="#servicios" class="inline-flex min-h-[44px] items-center justify-center gap-2 rounded-xl bg-ink px-7 py-3 text-base font-medium text-white shadow-sm hover:bg-neutral-800 transition-all">
+              Ver Servicios
+              <i data-lucide="arrow-right" class="h-5 w-5"></i>
+            </a>
+          </div>
+          <div class="mt-4 flex gap-8 pt-4 border-t border-neutral-100 w-full">
+            <div>
+              <p class="text-2xl font-semibold text-ink">20+</p>
+              <p class="text-sm text-neutral-500">Años de experiencia</p>
+            </div>
+            <div>
+              <p class="text-2xl font-semibold text-ink">26+</p>
+              <p class="text-sm text-neutral-500">Servicios</p>
+            </div>
+            <div>
+              <p class="text-2xl font-semibold text-ink">3</p>
+              <p class="text-sm text-neutral-500">Especialistas</p>
+            </div>
+          </div>
+        </div>
+        <div class="relative hidden lg:block">
+          <div class="relative aspect-[4/5] overflow-hidden rounded-3xl bg-gradient-to-br from-[#F5E6D3] to-[#C9A227]/25 shadow-xl flex items-center justify-center p-8">
+            <div class="text-center">
+              <span class="text-9xl font-light text-[#0A0A0A]/15 block">Y</span>
+              <p class="mt-4 text-2xl font-semibold text-[#0A0A0A]/70">Yvette</p>
+              <p class="text-sm text-[#0A0A0A]/50 uppercase tracking-widest mt-1">Centro de Estética</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicios" class="py-20 bg-neutral-50">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+          <span class="text-xs font-semibold uppercase tracking-widest text-[#C9A227]">Nuestros Servicios</span>
+          <h2 class="mt-3 text-3xl font-semibold text-ink sm:text-4xl">Tratamientos profesionales</h2>
+          <p class="mt-4 text-neutral-600">Descubre nuestra carta de servicios diseñados para resaltar tu belleza natural.</p>
+        </div>
+        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <!-- Card 1 -->
+          <div class="rounded-2xl bg-white p-6 shadow-sm border border-neutral-200/60 flex flex-col justify-between hover:shadow-md transition-shadow">
+            <div>
+              <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-[#F5E6D3] text-[#C9A227] mb-4">
+                <i data-lucide="scissors" class="h-6 w-6"></i>
+              </div>
+              <h3 class="text-lg font-semibold text-ink">Corte y Peinado</h3>
+              <p class="mt-2 text-sm text-neutral-600">Cortes modernos, brushing, peinados para eventos y tratamientos capilares personalizados.</p>
+            </div>
+            <div class="mt-6 flex items-center justify-between border-t border-neutral-100 pt-4">
+              <span class="text-sm font-semibold text-[#C9A227]">Desde S/ 35</span>
+              <span class="text-xs text-neutral-500">45 min</span>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div class="rounded-2xl bg-white p-6 shadow-sm border border-neutral-200/60 flex flex-col justify-between hover:shadow-md transition-shadow">
+            <div>
+              <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-[#F5E6D3] text-[#C9A227] mb-4">
+                <i data-lucide="palette" class="h-6 w-6"></i>
+              </div>
+              <h3 class="text-lg font-semibold text-ink">Coloración y Mechas</h3>
+              <p class="mt-2 text-sm text-neutral-600">Balayage, babylights, tintes completos, corrección de color y gloss capilar.</p>
+            </div>
+            <div class="mt-6 flex items-center justify-between border-t border-neutral-100 pt-4">
+              <span class="text-sm font-semibold text-[#C9A227]">Desde S/ 120</span>
+              <span class="text-xs text-neutral-500">120 min</span>
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div class="rounded-2xl bg-white p-6 shadow-sm border border-neutral-200/60 flex flex-col justify-between hover:shadow-md transition-shadow">
+            <div>
+              <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-[#F5E6D3] text-[#C9A227] mb-4">
+                <i data-lucide="sparkles" class="h-6 w-6"></i>
+              </div>
+              <h3 class="text-lg font-semibold text-ink">Laceados y Alizados</h3>
+              <p class="mt-2 text-sm text-neutral-600">Laceado brasileño, botox capilar y encerado coreano para un cabello liso y brillante.</p>
+            </div>
+            <div class="mt-6 flex items-center justify-between border-t border-neutral-100 pt-4">
+              <span class="text-sm font-semibold text-[#C9A227]">Desde S/ 150</span>
+              <span class="text-xs text-neutral-500">180 min</span>
+            </div>
+          </div>
+          <!-- Card 4 -->
+          <div class="rounded-2xl bg-white p-6 shadow-sm border border-neutral-200/60 flex flex-col justify-between hover:shadow-md transition-shadow">
+            <div>
+              <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-[#F5E6D3] text-[#C9A227] mb-4">
+                <i data-lucide="smile" class="h-6 w-6"></i>
+              </div>
+              <h3 class="text-lg font-semibold text-ink">Tratamientos Faciales</h3>
+              <p class="mt-2 text-sm text-neutral-600">Limpieza facial profunda, hidratación con ácido hialurónico y dermoabrasión.</p>
+            </div>
+            <div class="mt-6 flex items-center justify-between border-t border-neutral-100 pt-4">
+              <span class="text-sm font-semibold text-[#C9A227]">Desde S/ 80</span>
+              <span class="text-xs text-neutral-500">60 min</span>
+            </div>
+          </div>
+          <!-- Card 5 -->
+          <div class="rounded-2xl bg-white p-6 shadow-sm border border-neutral-200/60 flex flex-col justify-between hover:shadow-md transition-shadow">
+            <div>
+              <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-[#F5E6D3] text-[#C9A227] mb-4">
+                <i data-lucide="heart" class="h-6 w-6"></i>
+              </div>
+              <h3 class="text-lg font-semibold text-ink">Manicure y Pedicure</h3>
+              <p class="mt-2 text-sm text-neutral-600">Esmaltado en gel, spa de manos y pies, uñas acrílicas y diseños exclusivos.</p>
+            </div>
+            <div class="mt-6 flex items-center justify-between border-t border-neutral-100 pt-4">
+              <span class="text-sm font-semibold text-[#C9A227]">Desde S/ 45</span>
+              <span class="text-xs text-neutral-500">50 min</span>
+            </div>
+          </div>
+          <!-- Card 6 -->
+          <div class="rounded-2xl bg-white p-6 shadow-sm border border-neutral-200/60 flex flex-col justify-between hover:shadow-md transition-shadow">
+            <div>
+              <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-[#F5E6D3] text-[#C9A227] mb-4">
+                <i data-lucide="eye" class="h-6 w-6"></i>
+              </div>
+              <h3 class="text-lg font-semibold text-ink">Pestañas y Cejas</h3>
+              <p class="mt-2 text-sm text-neutral-600">Lifting de pestañas, extensión pelo a pelo, diseño y planchado de cejas.</p>
+            </div>
+            <div class="mt-6 flex items-center justify-between border-t border-neutral-100 pt-4">
+              <span class="text-sm font-semibold text-[#C9A227]">Desde S/ 50</span>
+              <span class="text-xs text-neutral-500">60 min</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="nosotros" class="py-20 bg-white">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <span class="text-xs font-semibold uppercase tracking-widest text-[#C9A227]">Sobre Nosotros</span>
+            <h2 class="mt-3 text-3xl font-semibold text-ink sm:text-4xl">Tradición y excelencia en Cercado de Lima</h2>
+            <p class="mt-4 text-neutral-600 leading-relaxed">
+              Fundado en 2005 por Yvette, nuestro centro se ha consolidado como un referente de confianza, calidad y buen trato. Contamos con un equipo fijo de profesionales apasionadas por realzar tu imagen.
+            </p>
+            <div class="mt-8 grid sm:grid-cols-3 gap-6">
+              <div class="bg-neutral-50 p-4 rounded-2xl border border-neutral-100">
+                <p class="font-semibold text-ink">Yvette</p>
+                <p class="text-xs text-neutral-500 mt-1">Fundadora & Master Stylist</p>
+              </div>
+              <div class="bg-neutral-50 p-4 rounded-2xl border border-neutral-100">
+                <p class="font-semibold text-ink">Elizabeth</p>
+                <p class="text-xs text-neutral-500 mt-1">Colorista Senior</p>
+              </div>
+              <div class="bg-neutral-50 p-4 rounded-2xl border border-neutral-100">
+                <p class="font-semibold text-ink">Lourdes</p>
+                <p class="text-xs text-neutral-500 mt-1">Cosmiatra & Esteticista</p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-[#F5E6D3]/40 rounded-3xl p-8 border border-[#C9A227]/20 flex flex-col justify-center">
+            <h3 class="text-xl font-semibold text-ink mb-4">¿Por qué elegirnos?</h3>
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <i data-lucide="check-circle" class="h-5 w-5 text-[#C9A227] shrink-0 mt-0.5"></i>
+                <span class="text-sm text-neutral-700">Más de 20 años de trayectoria ininterrumpida en Lima.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i data-lucide="check-circle" class="h-5 w-5 text-[#C9A227] shrink-0 mt-0.5"></i>
+                <span class="text-sm text-neutral-700">Productos profesionales de alta gama garantizados.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i data-lucide="check-circle" class="h-5 w-5 text-[#C9A227] shrink-0 mt-0.5"></i>
+                <span class="text-sm text-neutral-700">Atención personalizada y ambiente cálido y seguro.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Reservation simulated -->
+    <section id="reservar" class="py-20 bg-neutral-900 text-white">
+      <div class="mx-auto max-w-3xl px-4 text-center">
+        <h2 class="text-3xl font-semibold sm:text-4xl">¿Lista para tu transformación?</h2>
+        <p class="mt-4 text-neutral-400">Reserva tu cita hoy mismo o visítanos en nuestro local principal en Cercado de Lima.</p>
+        <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="admin.html" class="inline-flex min-h-[44px] items-center justify-center rounded-xl bg-[#C9A227] px-8 py-3 text-sm font-medium text-ink hover:bg-[#b08d20] transition-colors">
+            Explorar Panel Admin (Demo)
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-white border-t border-neutral-100 py-12">
+    <div class="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
+      <p class="text-sm text-neutral-500">© 2005 - 2026 Centro de Estética Yvette. RUC 10107822564. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <a href="/" style="position:fixed;top:8px;right:8px;z-index:999999;display:flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:12px;background:#000;border:2px solid rgba(255,255,255,0.6);box-shadow:0 4px 16px rgba(0,0,0,0.4);text-decoration:none;transition:all 0.15s" aria-label="Volver al portafolio">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="white" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+  </a>
+
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>
