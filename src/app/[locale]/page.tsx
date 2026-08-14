@@ -8,7 +8,7 @@ import About from '@/components/sections/About';
 import Education from '@/components/sections/Education';
 import Experience from '@/components/sections/Experience';
 import SkillsSection from '@/components/sections/SkillsSection';
-import ProjectsGrid from '@/components/sections/ProjectsGrid';
+import CyberRunnerProjects from '@/components/sections/CyberRunnerProjects';
 import Contact from '@/components/sections/Contact';
 
 export function generateStaticParams() {
@@ -46,7 +46,7 @@ export default async function Page({
         <Education i18n={i18n} certs={certs} />
         <Experience i18n={i18n} experience={experience} />
         <SkillsSection i18n={i18n} skills={skills} techNodes={techNodes} />
-        <ProjectsGrid i18n={i18n} projects={projects} langPrefix={langPrefix} />
+        <CyberRunnerProjects i18n={i18n} projects={projects} />
         <Contact i18n={i18n} />
       </main>
 

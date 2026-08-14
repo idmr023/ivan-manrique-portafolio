@@ -194,6 +194,30 @@ export function getPortfolioData(i18n: Record<string, string>) {
       repo: '#',
       featured: false,
     },
+    {
+      id: 'licitabien',
+      title: i18n.PROJ_LICITABIEN_TITLE,
+      problem: i18n.PROJ_LICITABIEN_PROBLEM,
+      desc: i18n.PROJ_LICITABIEN_DESC,
+      result: i18n.PROJ_LICITABIEN_RESULT,
+      techs: i18n.PROJ_LICITABIEN_TECHS,
+      image: i18n.PROJ_LICITABIEN_IMAGE,
+      demo: i18n.PROJ_LICITABIEN_DEMO,
+      repo: i18n.PROJ_LICITABIEN_REPO,
+      featured: true,
+    },
+    {
+      id: 'app-pasos',
+      title: i18n.PROJ_APP_PASOS_TITLE,
+      problem: i18n.PROJ_APP_PASOS_PROBLEM,
+      desc: i18n.PROJ_APP_PASOS_DESC,
+      result: i18n.PROJ_APP_PASOS_RESULT,
+      techs: i18n.PROJ_APP_PASOS_TECHS,
+      image: i18n.PROJ_APP_PASOS_IMAGE,
+      demo: i18n.PROJ_APP_PASOS_DEMO,
+      repo: i18n.PROJ_APP_PASOS_REPO,
+      featured: false,
+    },
   ];
 
   const experience: ExperienceItem[] = [
@@ -213,6 +237,7 @@ export function getPortfolioData(i18n: Record<string, string>) {
     { title: i18n.CERT_IBM_TITLE, desc: i18n.CERT_IBM_DESC },
     { title: i18n.CERT_GOOGLE_TITLE, desc: i18n.CERT_GOOGLE_DESC },
     { title: i18n.CERT_ORACLE_TITLE, desc: i18n.CERT_ORACLE_DESC },
+    { title: i18n.CERT_SCRUM_TITLE, desc: i18n.CERT_SCRUM_DESC },
   ];
 
   const dockItems: DockItem[] = [

@@ -38,6 +38,16 @@ const projectCategories: Record<string, CategoryConfig> = {
     color: '#f59e0b',
     ids: ['ripnel', 'ollas-comunes', 'gestionalo'],
   },
+  web3: {
+    label: '(Web3 & Hackathons)',
+    color: '#a78bfa',
+    ids: ['licitabien'],
+  },
+  apps: {
+    label: '(Aplicaciones Móviles)',
+    color: '#34d399',
+    ids: ['app-pasos'],
+  },
 };
 
 export default function Projects({ i18n, projects, standalone }: ProjectsProps) {

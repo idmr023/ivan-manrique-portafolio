@@ -10,7 +10,7 @@ interface ProjectsGridProps {
   langPrefix: string;
 }
 
-const GRID_IDS = ['ripnel', 'commercial-bi', 'cx-metrics', 'social-eda'];
+const GRID_IDS = ['ripnel', 'licitabien', 'app-pasos', 'commercial-bi', 'cx-metrics', 'social-eda'];
 
 export default function ProjectsGrid({ i18n, projects, langPrefix }: ProjectsGridProps) {
   const gridProjects = projects.filter((p) => GRID_IDS.includes(p.id));

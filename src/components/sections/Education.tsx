@@ -12,10 +12,19 @@ interface EducationProps {
   certs: Cert[];
 }
 
+const STATUS_COLORS: Record<string, string> = {
+  sky: 'bg-sky-400/10 text-sky-400 border-sky-400/20',
+  amber: 'bg-amber-400/10 text-amber-400 border-amber-400/20',
+  violet: 'bg-violet-400/10 text-violet-400 border-violet-400/20',
+  emerald: 'bg-emerald-400/10 text-emerald-400 border-emerald-400/20',
+};
+
 export default function Education({ i18n, certs }: EducationProps) {
   const cards = [
-    { title: i18n.EDUCATION_UTP_TITLE, desc: i18n.EDUCATION_UTP_DESC, status: i18n.EDUCATION_UTP_STATUS, statusColor: 'sky' as const },
-    { title: i18n.EDUCATION_IMPULSA_TITLE, desc: i18n.EDUCATION_IMPULSA_DESC, status: i18n.EDUCATION_IMPULSA_STATUS, statusColor: 'amber' as const },
+    { title: i18n.EDUCATION_UTP_TITLE, desc: i18n.EDUCATION_UTP_DESC, status: i18n.EDUCATION_UTP_STATUS, statusColor: 'sky' },
+    { title: i18n.EDUCATION_IMPULSA_TITLE, desc: i18n.EDUCATION_IMPULSA_DESC, status: i18n.EDUCATION_IMPULSA_STATUS, statusColor: 'amber' },
+    { title: i18n.EDUCATION_ITB_TITLE, desc: i18n.EDUCATION_ITB_DESC, status: i18n.EDUCATION_ITB_STATUS, statusColor: 'violet' },
+    { title: i18n.EDUCATION_ETH_TITLE, desc: i18n.EDUCATION_ETH_DESC, status: i18n.EDUCATION_ETH_STATUS, statusColor: 'emerald' },
   ];
 
   return (
@@ -37,9 +46,7 @@ export default function Education({ i18n, certs }: EducationProps) {
                 <h3 className="text-lg font-display font-semibold text-white">{card.title}</h3>
                 <span
                   className={`px-2.5 py-0.5 text-xs rounded border w-fit font-mono ${
-                    card.statusColor === 'sky'
-                      ? 'bg-sky-400/10 text-sky-400 border-sky-400/20'
-                      : 'bg-amber-400/10 text-amber-400 border-amber-400/20'
+                    STATUS_COLORS[card.statusColor] ?? STATUS_COLORS.sky
                   }`}
                 >
                   {card.status}

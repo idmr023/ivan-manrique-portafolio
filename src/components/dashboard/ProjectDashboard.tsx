@@ -192,7 +192,7 @@ function DashboardContent() {
 
         <footer className="mt-12 pt-6 border-t border-sky-400/5 flex items-center justify-between">
           <span className="text-[10px] font-mono text-slate-700 tracking-widest uppercase">
-            Last updated: 2026-06-29
+            Last updated: 2026-08-13
           </span>
           <span className="text-[10px] font-mono text-slate-700 tracking-widest uppercase">
             {trackedProjects.length} projects tracked

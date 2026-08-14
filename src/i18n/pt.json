@@ -23,7 +23,7 @@
 
     "ABOUT_TITLE": "Sobre mim",
     "ABOUT_P1": "Sou Ivan Daniel Manrique Roa, Desenvolvedor Frontend e Data Analyst. Construo pontes entre o mundo dos dados e a experiência do usuário, transformando requisitos complexos em produtos digitais que geram resultados mensuráveis.",
-    "ABOUT_P2": "Atualmente, curso Engenharia de Software na UTP, onde fui selecionado para o programa de talentos diretivos <strong>Impulsa UTP</strong> e integro o Tercio Superior. Minha trajetória une dois mundos: a precisão analítica dos dados e a arte de desenvolver interfaces que encantam.",
+    "ABOUT_P2": "Sou recém-formado em Engenharia de Software pela UTP, onde fui selecionado para o programa de talentos diretivos <strong>Impulsa UTP</strong> e integrei o Tercio Superior. Minha trajetória une dois mundos: a precisão analítica dos dados e a arte de desenvolver interfaces que encantam.",
     "ABOUT_P3": "Fora das telas, sou corredor disciplinado. Estou me preparando para uma corrida de 35km no deserto de Marcona, com largada às 3 da manhã, e estou no caminho para conquistar a <strong>\"Medalha da Inspiração\"</strong>. Cada quilômetro percorrido reforça as mesmas competências que aplico no código: resiliência, foco sob pressão, gestão do tempo e melhoria contínua. Uma sprint de cada vez, um commit de cada vez.",
     "ABOUT_CTA": "Conheça minha história completa",
 
@@ -38,7 +38,7 @@
     "EXP_RIPNEL_4": "Colaborei diretamente com stakeholders para traduzir requisitos de negócio em funcionalidades técnicas, aplicando metodologias ágeis com entregas iterativas.",
 
     "EXP_TP_ROLE": "Customer Service Agent, Teleperformance",
-    "EXP_TP_PERIOD": "2024 – Presente",
+    "EXP_TP_PERIOD": "2024 – Agosto 2026",
     "EXP_TP_1": "Fui promovido a Tier 4 Trilíngue (Espanhol, Inglês, Português), passando a liderar equipes de suporte e atuar como ponto de escalação para casos de alta complexidade.",
     "EXP_TP_2": "Implementei dashboards interativos com Tableau para análise de métricas operacionais, otimizando a visualização de KPIs e reduzindo o tempo de reporte semanal em 40%.",
     "EXP_TP_3": "Liderei sessões de treinamento e mentoria para mais de 20 agentes, elevando os índices de resolução no primeiro contato (FCR) em 25% por meio de documentação e padronização de processos.",
@@ -86,6 +86,24 @@
     "PROJ_LAW_FIRM_IMAGE": "/projects/law_firm.png",
     "PROJ_LAW_FIRM_DEMO": "https://proyecto-abogado.vercel.app/",
     "PROJ_LAW_FIRM_REPO": "https://github.com/idmr023/ProyectoAbogado",
+
+    "PROJ_LICITABIEN_TITLE": "LicitaBien — Licitações Descentralizadas",
+    "PROJ_LICITABIEN_PROBLEM": "As licitações públicas no Peru enfrentam vazamento de propostas, conluio e manipulação na adjudicação de contratos, prejudicando MYPES e entidades que competem em igualdade de condições.",
+    "PROJ_LICITABIEN_DESC": "Plataforma descentralizada de licitações públicas e adjudicação de contratos para MYPES e entidades peruanas sobre Arbitrum Sepolia, projetada para blindar os processos de licitação e factoring: propostas seladas on-chain via BlindBidVault (Commit-Reveal) que impedem vazamentos, conluio e manipulação; avaliação automatizada por IA com OpenRouter / Llama 3.1 Nemotron que produz um aiScore de qualidade (0-100); e credenciais EAS (Ethereum Attestation Service) para atestações on-chain de reputação e adjudicação. MVP construído como parte do EthLima Hackathon 2026.",
+    "PROJ_LICITABIEN_RESULT": "MVP SaaS B2B funcional em Arbitrum com licitações transparentes, propostas seladas on-chain e avaliação por Inteligência Artificial.",
+    "PROJ_LICITABIEN_TECHS": "Solidity | Arbitrum Sepolia | Smart Contracts | OpenRouter | Llama 3.1 Nemotron | EAS | Next.js | Inteligência Artificial",
+    "PROJ_LICITABIEN_IMAGE": "/projects/eth_hackhaton.png",
+    "PROJ_LICITABIEN_DEMO": "https://eth-hackathon-2026-ethdevelopers.vercel.app/",
+    "PROJ_LICITABIEN_REPO": "#",
+
+    "PROJ_APP_PASOS_TITLE": "App Pasos — Desafios, Academia e Coach IA",
+    "PROJ_APP_PASOS_PROBLEM": "Os desafios de passos e os treinos de academia geralmente vivem em apps separados, sem gamificação, acompanhamento diário nem um coach que personalize a experiência.",
+    "PROJ_APP_PASOS_DESC": "Aplicativo móvel de desafios de passos e academia com gamificação completa: registro diário de passos em desafios contra amigos com código de convite (6 caracteres), calendário mensal e estatísticas semanais/mensais com gráfico de barras; sistema de XP e níveis (1 XP a cada 10 passos, fórmula 1000 × L × (L+1) / 2) com recompensas a cada 10 níveis (Caminante, Maratonista, Ultramaratonista, Leyenda, Titán); módulo de academia com 1.327+ exercícios da API WorkoutX com GIFs em 4 categorias, rotinas passo a passo e timer real baseado em DateTime.now(); Coach IA integrado com Gemini via backend Express e RAG sobre MongoDB com memória persistente de conversas; e conquistas de peso automáticas (25-200 kg).",
+    "PROJ_APP_PASOS_RESULT": "App completa de fitness e desafios com gamificação, timer real com o celular bloqueado e Coach IA com memória persistente.",
+    "PROJ_APP_PASOS_TECHS": "Flutter | Dart | Node.js | Express | MongoDB | Gemini AI | WorkoutX API | RAG",
+    "PROJ_APP_PASOS_IMAGE": "/projects/app_pasos.jpg",
+    "PROJ_APP_PASOS_DEMO": "#",
+    "PROJ_APP_PASOS_REPO": "#",
 
     "PROJ_RIPNEL_PROBLEM": "Empresa têxtil dependia de processos manuais e em papel para inventário, transferências e vendas, gerando ineficiências e discrepâncias.",
     "PROJ_COMMERCIAL_BI_PROBLEM": "Necessidade de transformar dados comerciais brutos em um dashboard interativo para decisão ágil.",
@@ -164,13 +182,24 @@
     "EDUCATION_TITLE": "Formação & Conquistas",
     "EDUCATION_UTP_TITLE": "Engenharia de Software, UTP",
     "EDUCATION_UTP_DESC": "Tercio Superior. Selecionado para o programa de talentos diretivos Impulsa UTP.",
-    "EDUCATION_UTP_STATUS": "Em andamento",
+    "EDUCATION_UTP_STATUS": "Formado",
 
     "EDUCATION_IMPULSA_TITLE": "Programa Impulsa UTP",
     "EDUCATION_IMPULSA_DESC": "Programa de talentos diretivos com foco em liderança, inovação e visão estratégica de negócios.",
-    "EDUCATION_IMPULSA_STATUS": "Em andamento",
+    "EDUCATION_IMPULSA_STATUS": "Formado",
+
+    "EDUCATION_ITB_TITLE": "IT for Banking — UTP e Interbank",
+    "EDUCATION_ITB_DESC": "Selecionado para o curso de IT for Banking em aliança com o Interbank, especializado em tecnologia e transformação digital do setor bancário.",
+    "EDUCATION_ITB_STATUS": "Agosto 2026 - atualidade",
+
+    "EDUCATION_ETH_TITLE": "EthLima Hackathon 2026",
+    "EDUCATION_ETH_DESC": "Desenvolvedor Web3 no Hackathon Ethereum Lima 2026. Criei o LicitaBien, MVP SaaS B2B em Arbitrum para licitações transparentes mediante Smart Contracts e Inteligência Artificial.",
+    "EDUCATION_ETH_STATUS": "2026",
 
     "CERTIFICATIONS_TITLE": "Certificações",
+
+    "CERT_SCRUM_TITLE": "SCRUM Fundamentals, 2026",
+    "CERT_SCRUM_DESC": "Certificação que valida minha capacidade de desenvolver e gerenciar projetos tecnológicos sob a metodologia ágil SCRUM.",
 
     "CERT_GOOGLE_TITLE": "Google Data Analytics Professional Certificate, Coursera, 2024",
     "CERT_GOOGLE_DESC": "Domínio de SQL, análise de dados em Python e visualização com Tableau para tomada de decisões.",

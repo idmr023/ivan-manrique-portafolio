@@ -8,7 +8,7 @@ interface DashboardProps {
 
 export default function Dashboard({ i18n }: DashboardProps) {
   const metrics = [
-    { value: '5', label: i18n.PROJECTS_TITLE, color: 'text-sky-400' },
+    { value: '10', label: i18n.PROJECTS_TITLE, color: 'text-sky-400' },
     { value: '1900+', label: i18n.EXP_TP_1?.split(' ').slice(-2).join(' ') || 'Cases', color: 'text-neon-400' },
     { value: '35km', label: i18n.RUNNING_LABEL_1, color: 'text-sky-400' },
   ];
