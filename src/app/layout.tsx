@@ -1,10 +1,15 @@
 import type { Metadata } from 'next';
-import { Inter, Montserrat, JetBrains_Mono } from 'next/font/google';
+import { Chakra_Petch, Space_Grotesk, JetBrains_Mono } from 'next/font/google';
 import './globals.css';
 
-const inter = Inter({ subsets: ['latin'], variable: '--font-inter', display: 'swap' });
-const montserrat = Montserrat({ subsets: ['latin'], variable: '--font-montserrat', display: 'swap' });
-const jetbrains = JetBrains_Mono({ subsets: ['latin'], variable: '--font-jetbrains', display: 'swap' });
+const display = Chakra_Petch({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-display',
+  display: 'swap',
+});
+const sans = Space_Grotesk({ subsets: ['latin'], variable: '--font-sans', display: 'swap' });
+const mono = JetBrains_Mono({ subsets: ['latin'], variable: '--font-mono', display: 'swap' });
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://ivan-manrique-portfolio.vercel.app'),
@@ -23,7 +28,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="es" className={`${inter.variable} ${montserrat.variable} ${jetbrains.variable}`}>
+    <html lang="es" className={`${display.variable} ${sans.variable} ${mono.variable}`}>
       <body className="bg-void text-slate-200 font-sans antialiased">{children}</body>
     </html>
   );

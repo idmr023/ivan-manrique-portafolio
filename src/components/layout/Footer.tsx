@@ -10,7 +10,7 @@ interface FooterProps {
 
 export default function Footer({ i18n, langPrefix }: FooterProps) {
   return (
-    <footer className="border-t border-sky-400/10 py-10 px-4 sm:px-6 pb-20 lg:pb-10">
+    <footer className="relative z-10 border-t border-sky-400/10 bg-[#07070b]/80 backdrop-blur py-10 px-4 sm:px-6 pb-24 lg:pb-10">
       <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
         <div className="text-center sm:text-left">
           <a
