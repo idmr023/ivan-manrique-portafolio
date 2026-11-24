@@ -34,6 +34,8 @@ export interface ExperienceItem {
   role: string;
   period: string;
   bullets: string[];
+  /** Live site of the company/product, shown as a clickable link. */
+  url?: string;
 }
 
 export interface Cert {
@@ -147,18 +149,6 @@ export function getPortfolioData(i18n: Record<string, string>) {
       featured: false,
     },
     {
-      id: 'law-firm',
-      title: i18n.PROJ_LAW_FIRM_TITLE,
-      problem: i18n.PROJ_LAW_FIRM_PROBLEM,
-      desc: i18n.PROJ_LAW_FIRM_DESC,
-      result: i18n.PROJ_LAW_FIRM_RESULT,
-      techs: i18n.PROJ_LAW_FIRM_TECHS,
-      image: i18n.PROJ_LAW_FIRM_IMAGE,
-      demo: i18n.PROJ_LAW_FIRM_DEMO,
-      repo: '#',
-      featured: false,
-    },
-    {
       id: 'ollas-comunes',
       title: 'Ollas Comunes',
       problem: 'Las ollas comunes enfrentan desafíos en: registro y seguimiento de beneficiarios, control de inventario de insumos, planificación de menús y recetas, trazabilidad de entregas de comida, coordinación entre organizaciones y distritos.',
@@ -222,14 +212,25 @@ export function getPortfolioData(i18n: Record<string, string>) {
 
   const experience: ExperienceItem[] = [
     {
+      role: i18n.EXP_GREENLINE_ROLE,
+      period: i18n.EXP_GREENLINE_PERIOD,
+      url: 'https://glperu.com/',
+      bullets: [i18n.EXP_GREENLINE_1, i18n.EXP_GREENLINE_2, i18n.EXP_GREENLINE_3, i18n.EXP_GREENLINE_4, i18n.EXP_GREENLINE_5],
+    },
+    {
       role: i18n.EXP_RIPNEL_ROLE,
       period: i18n.EXP_RIPNEL_PERIOD,
-      bullets: [i18n.EXP_RIPNEL_1, i18n.EXP_RIPNEL_2, i18n.EXP_RIPNEL_3, i18n.EXP_RIPNEL_4],
+      bullets: [i18n.EXP_RIPNEL_1, i18n.EXP_RIPNEL_2, i18n.EXP_RIPNEL_3],
     },
     {
       role: i18n.EXP_TP_ROLE,
       period: i18n.EXP_TP_PERIOD,
-      bullets: [i18n.EXP_TP_1, i18n.EXP_TP_2, i18n.EXP_TP_3, i18n.EXP_TP_4],
+      bullets: [i18n.EXP_TP_1, i18n.EXP_TP_2, i18n.EXP_TP_3],
+    },
+    {
+      role: i18n.EXP_YVETTE_ROLE,
+      period: i18n.EXP_YVETTE_PERIOD,
+      bullets: [i18n.EXP_YVETTE_1, i18n.EXP_YVETTE_2, i18n.EXP_YVETTE_3],
     },
   ];
 

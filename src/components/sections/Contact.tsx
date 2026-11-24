@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import { Mail, Download, Copy, Check, Linkedin, Github } from 'lucide-react';
 import SectionContainer from '@/components/ui/SectionContainer';
 import Magnetic from '@/components/experience/Magnetic';
-import { CV_URL, EMAIL, GITHUB_URL, LINKEDIN_URL } from '@/lib/constants';
+import { CV_URL, CV_FILENAME, EMAIL, GITHUB_URL, LINKEDIN_URL } from '@/lib/constants';
 import type { UIStrings } from '@/i18n/ui';
 
 interface ContactProps {
@@ -86,7 +86,7 @@ export default function Contact({ i18n, ui }: ContactProps) {
               </button>
             </Magnetic>
             <Magnetic>
-              <a href={CV_URL} target="_blank" rel="noopener noreferrer" className="btn-ghost !py-4 !border-neon-400/40 !text-neon-300" data-cursor="CV">
+              <a href={CV_URL} download={CV_FILENAME} className="btn-ghost !py-4 !border-neon-400/40 !text-neon-300" data-cursor="CV">
                 <Download size={16} />
                 {i18n.CONTACT_CTA_SECONDARY}
               </a>

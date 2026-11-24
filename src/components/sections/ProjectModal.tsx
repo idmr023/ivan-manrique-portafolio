@@ -38,7 +38,7 @@ export default function ProjectModal({ project, index, total, i18n, closeLabel, 
     <AnimatePresence>
       {project && (
         <motion.div
-          className="fixed inset-0 z-[140] flex items-center justify-center p-3 sm:p-8 bg-black/75 backdrop-blur-md"
+          className="fixed inset-0 z-[140] flex items-center justify-center p-3 sm:p-8 bg-black/88"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}

@@ -1,6 +1,5 @@
 {
     "WEBPAGE_TITLE": "Portfólio, Ivan Manrique | Dev Frontend & Data Analyst",
-
     "NAV_HOME": "Início",
     "NAV_ABOUT": "Sobre",
     "NAV_EXPERIENCE": "Experiência",
@@ -12,41 +11,44 @@
     "LANG_ES": "ES",
     "LANG_EN": "EN",
     "LANG_PT": "PT",
-
     "HERO_NAME": "Sou Ivan Manrique",
     "HERO_H1": "Código, dados e quilômetros: construo soluções que performam.",
-    "HERO_H2": "Desenvolvedor Frontend & Data Analyst. Transformo dados em decisões e ideias em interfaces de alto impacto, com a mesma disciplina de quem corre longas distâncias no deserto.",
+    "HERO_H2": "Bacharel em Engenharia de Software · Desenvolvedor Web Full-Stack & Data Analyst. Transformo dados em decisões e ideias em produtos de alto impacto, com a mesma disciplina de quem corre longas distâncias no deserto.",
     "HERO_CTA_PRIMARY": "Ver Projetos",
     "HERO_CTA_SECONDARY": "Baixar CV",
     "HERO_IMG_ALT": "Foto de perfil de Ivan Manrique",
     "HERO_BADGE": "Disponível para oportunidades",
-
     "ABOUT_TITLE": "Sobre mim",
-    "ABOUT_P1": "Sou Ivan Daniel Manrique Roa, Desenvolvedor Frontend e Data Analyst. Construo pontes entre o mundo dos dados e a experiência do usuário, transformando requisitos complexos em produtos digitais que geram resultados mensuráveis.",
-    "ABOUT_P2": "Sou recém-formado em Engenharia de Software pela UTP, onde fui selecionado para o programa de talentos diretivos <strong>Impulsa UTP</strong> e integrei o Tercio Superior. Minha trajetória une dois mundos: a precisão analítica dos dados e a arte de desenvolver interfaces que encantam.",
-    "ABOUT_P3": "Fora das telas, sou corredor disciplinado. Estou me preparando para uma corrida de 35km no deserto de Marcona, com largada às 3 da manhã, e estou no caminho para conquistar a <strong>\"Medalha da Inspiração\"</strong>. Cada quilômetro percorrido reforça as mesmas competências que aplico no código: resiliência, foco sob pressão, gestão do tempo e melhoria contínua. Uma sprint de cada vez, um commit de cada vez.",
+    "ABOUT_P1": "Sou Ivan Daniel Manrique Roa, Bacharel em Engenharia de Software e Desenvolvedor Web Full-Stack. Sou apaixonado por análise de dados, desenvolvimento web, IA e esporte de alto rendimento. Tenho experiência prática projetando e implementando sistemas ERP para os setores têxtil e comercial, e gosto de estabelecer novos desafios constantemente, no trabalho e no esporte.",
+    "ABOUT_P2": "Estudei Engenharia de Software na UTP (2021 – 2026), onde integrei o <strong>Terço Superior</strong> e fui selecionado para o programa de talentos <strong>Impulsa UTP</strong> e para o programa <strong>IT for Banking</strong> em parceria com o Interbank. Falo inglês avançado e português intermediário, e busco agregar valor com adaptabilidade, resiliência e conhecimento técnico.",
+    "ABOUT_P3": "Fora das telas, sou um corredor disciplinado: estou me preparando para uma corrida de 35km no deserto de Marcona, com largada às 3 da manhã, em busca da <strong>\"Medalha da Inspiração\"</strong>. Também sou voluntário na <strong>Lima Verde</strong> e na <strong>Limpia Tu Playa</strong>. Cada quilômetro reforça o que aplico no código: resiliência, foco sob pressão e melhoria contínua. Um sprint de cada vez, um commit de cada vez.",
     "ABOUT_CTA": "Conheça minha história completa",
-
     "EXPERIENCE_TITLE": "Experiência Profissional",
     "EXPERIENCE_SUBTITLE": "Resultados comprovados com método STAR",
-
-    "EXP_RIPNEL_ROLE": "Desenvolvedor Frontend, Ripnel",
-    "EXP_RIPNEL_PERIOD": "2026 - Presente",
-    "EXP_RIPNEL_1": "Desenvolvi do zero um ERP corporativo completo utilizando React, Next.js e Supabase, entregando uma plataforma funcional que centraliza operações internas da empresa.",
-    "EXP_RIPNEL_2": "Implementei pipelines de automação com IA Generativa para validação e processamento de dados, reduzindo em 30% o tempo de registro e eliminando erros manuais recorrentes.",
-    "EXP_RIPNEL_3": "Projetei e integrei um chatbot inteligente com suporte a múltiplos idiomas, diminuindo o tempo de resposta ao cliente em 45% e melhorando os índices de satisfação do suporte interno.",
-    "EXP_RIPNEL_4": "Colaborei diretamente com stakeholders para traduzir requisitos de negócio em funcionalidades técnicas, aplicando metodologias ágeis com entregas iterativas.",
-
+    "EXP_GREENLINE_ROLE": "Desenvolvedor Web, Greenline",
+    "EXP_GREENLINE_PERIOD": "Julho 2026 - Atual",
+    "EXP_GREENLINE_1": "Desenvolvi o e-commerce público (glperu.com) e o painel ERP como duas SPAs em React 19, Vite, React Router 7 e Tailwind CSS 4: catálogo com fichas técnicas, carrinho e checkout, CMS/blog com editor Tiptap, mapa de lojas com Leaflet e PWA com service worker e cache de imagens.",
+    "EXP_GREENLINE_2": "Construí a API REST com Node.js, Express 5 e Prisma 7 sobre PostgreSQL (40 modelos), validada com Zod e documentada em OpenAPI; integra Supabase (Auth, Storage, RLS), fila de e-mails com BullMQ/Redis, logs estruturados com Pino e monitoramento com Sentry.",
+    "EXP_GREENLINE_3": "Implementei um login unificado para equipe e clientes: JWT de acesso com rotação de refresh tokens, OTP por e-mail, 2FA com TOTP e Passkeys (WebAuthn), hashing Argon2, permissões por função com CASL, auditoria de operações sensíveis e um cofre de credenciais criptografado com AES-256-GCM.",
+    "EXP_GREENLINE_4": "Configurei CI/CD com GitHub Actions: lint (Oxlint), smoke tests de segurança, testes de backend com Vitest, E2E com Playwright, Lighthouse CI e SonarQube; auto-PR de develop para main, versionamento com release-please e deploy no Render e na Vercel atrás da Cloudflare somente com checks verdes.",
+    "EXP_GREENLINE_5": "Desenvolvi os módulos internos do ERP: movimentações de estoque multi-armazém com fluxo de aprovações em 8 filiais, agendamentos, garantias e assistência técnica, Livro de Reclamações automatizado busca de catálogo e o protótipo de um assistente RAG (embeddings em pgvector, respostas via SSE).",
     "EXP_TP_ROLE": "Customer Service Agent, Teleperformance",
-    "EXP_TP_PERIOD": "2024 – Agosto 2026",
-    "EXP_TP_1": "Fui promovido a Tier 4 Trilíngue (Espanhol, Inglês, Português), passando a liderar equipes de suporte e atuar como ponto de escalação para casos de alta complexidade.",
-    "EXP_TP_2": "Implementei dashboards interativos com Tableau para análise de métricas operacionais, otimizando a visualização de KPIs e reduzindo o tempo de reporte semanal em 40%.",
-    "EXP_TP_3": "Liderei sessões de treinamento e mentoria para mais de 20 agentes, elevando os índices de resolução no primeiro contato (FCR) em 25% por meio de documentação e padronização de processos.",
-    "EXP_TP_4": "Gerenciei dados de clientes com foco em qualidade e integridade, aplicando técnicas de Data Cleaning e análise exploratória para identificar padrões de recorrência e propor soluções preventivas.",
-
+    "EXP_TP_PERIOD": "Abril 2024 - Julho 2026",
+    "EXP_TP_1": "Atuei como elo estratégico entre o cliente e o negócio, evoluindo de suporte bilíngue até Agente Tier 4 Trilíngue com a resolução de mais de 1.200 consultas, mantendo 80% de satisfação e reduzindo em 25% os tempos de resolução.",
+    "EXP_TP_2": "Fui o primeiro agente Tier 3 Trilíngue de Lima e levei minha equipe ao 1º lugar de desempenho por 3 meses consecutivos, assumindo depois responsabilidades de maior impacto estratégico como Tier 4.",
+    "EXP_TP_3": "Projetei e implementei dashboards interativos no Tableau para monitorar KPIs e OKRs operacionais, traduzindo dados técnicos em relatórios executivos para a tomada de decisão dos stakeholders.",
+    "EXP_RIPNEL_ROLE": "Estagiário Pré-profissional, Tejidos y Confecciones Ripnel",
+    "EXP_RIPNEL_PERIOD": "Fevereiro 2026 - Julho 2026",
+    "EXP_RIPNEL_1": "Participei do desenvolvimento e implantação do ERP interno da empresa, focado na transformação digital das operações, melhorando o controle de estoque e a eficiência da cadeia de suprimentos.",
+    "EXP_RIPNEL_2": "Alcançamos uma otimização de 30% em processos antes feitos manualmente, graças à automação e simplificação com tecnologia e IA.",
+    "EXP_RIPNEL_3": "Realizei testes funcionais, ajustes de código e a documentação técnica do projeto, e colaborei em reuniões de análise e coordenação técnica com a equipe.",
+    "EXP_YVETTE_ROLE": "Desenvolvedor Full-Stack, Centro de Estética Yvette",
+    "EXP_YVETTE_PERIOD": "Março 2024 - Agosto 2026",
+    "EXP_YVETTE_1": "Liderei a criação da plataforma de E-commerce e gestão operacional como Product Owner, gerenciando e priorizando o Backlog no framework ágil SCRUM para entregar valor a cada iteração.",
+    "EXP_YVETTE_2": "Automatizei processos críticos de agendamento e pagamentos com foco na experiência do usuário, digitalizando totalmente processos administrativos manuais e habilitando reservas 24/7.",
+    "EXP_YVETTE_3": "Implementei testes automatizados E2E, integração contínua e documentação técnica completa, garantindo um produto robusto e escalável.",
     "PROJECTS_TITLE": "Projetos",
     "PROJECTS_SUBTITLE": "Cases reais com impacto mensurável",
-
     "PROJ_RIPNEL_TITLE": "Sistema ERP Personalizado — Ripnel",
     "PROJ_RIPNEL_DESC": "Uma empresa têxtil e de varejo dependia inteiramente de processos manuais e baseados em papel para seu inventário, transferências e vendas diárias, gerando ineficiências e discrepâncias nos dados. Co-desenvolvi Ripnel, um MVP integral de ERP web e POS (Point of Sale) projetado para digitalizar completamente as operações em múltiplas lojas. Construí interfaces responsivas e otimizadas com frameworks modernos de frontend, acopladas a uma arquitetura backend robusta para lidar com lógica de negócio complexa (vendas, inventário multi-loja, caixas). Integrei um assistente de IA Agentic (Google Gemini) diretamente no banco de dados para automatizar analytics, relatórios em tempo real e responder consultas em linguagem natural. Além disso, redigi documentação técnica completa do sistema para garantir manutenibilidade a longo prazo.",
     "PROJ_RIPNEL_RESULT": "Redução de 30% no tempo operacional e 45% no tempo de resposta ao cliente.",
@@ -54,7 +56,6 @@
     "PROJ_RIPNEL_IMAGE": "/projects/ripnel.png",
     "PROJ_RIPNEL_DEMO": "#",
     "PROJ_RIPNEL_REPO": "#",
-
     "PROJ_COMMERCIAL_BI_TITLE": "Dashboard de Acompanhamento Comercial BI",
     "PROJ_COMMERCIAL_BI_DESC": "Desenvolvi um dashboard integral de acompanhamento comercial utilizando Power BI para um caso de negócio simulado. O projeto focou em transformar dados brutos em um dashboard interativo e visualmente atraente para acompanhar métricas chave da empresa. Implementei fórmulas DAX avançadas, criei tabelas calculadas e projetei medidas otimizadas em memória para garantir alto desempenho e tempos de carregamento rápidos. O produto final forneceu insights claros e acionáveis para a tomada de decisões comerciais.",
     "PROJ_COMMERCIAL_BI_RESULT": "Dashboard interativo com DAX avançado e medidas otimizadas para decisão comercial.",
@@ -62,7 +63,6 @@
     "PROJ_COMMERCIAL_BI_IMAGE": "/projects/dashboard_bi.png",
     "PROJ_COMMERCIAL_BI_DEMO": "#",
     "PROJ_COMMERCIAL_BI_REPO": "#",
-
     "PROJ_CX_METRICS_TITLE": "Análise de Métricas CX — Teleperformance",
     "PROJ_CX_METRICS_DESC": "Gerenciei e analisei dados usando um sistema de dashboards interativos em Tableau e SQL Server para uma empresa BPO global. Meu papel focou em operar essas ferramentas para acompanhar, interpretar e reportar métricas críticas de Customer Experience, incluindo First Contact Resolution, CSAT e Average Resolution Time. Ao navegar eficientemente os pipelines de dados existentes e otimizar o fluxo de trabalho de relatórios diários, reduzi o tempo de geração de relatórios em 40% e forneci insights claros e acionáveis que aumentaram a eficiência na tomada de decisões da equipe de gestão em 18%.",
     "PROJ_CX_METRICS_RESULT": "Redução de 40% no tempo de relatórios e aumento de 18% na eficiência de decisões.",
@@ -70,7 +70,6 @@
     "PROJ_CX_METRICS_IMAGE": "/projects/tp_dashboard.jpg",
     "PROJ_CX_METRICS_DEMO": "#",
     "PROJ_CX_METRICS_REPO": "#",
-
     "PROJ_SOCIAL_EDA_TITLE": "Limpeza e Análise de Redes Sociais",
     "PROJ_SOCIAL_EDA_DESC": "Conduzi uma Análise Exploratória de Dados (EDA) em um dataset de redes sociais utilizando Python. Limpei e processei os dados com sucesso para identificar tendências de engajamento dos clientes, detectei as causas raiz das quedas históricas na interação de usuários e propus resoluções baseadas em dados para melhorar o desempenho futuro. A análise revelou padrões de comportamento e pontos de inflexão que permitiram formular recomendações estratégicas acionáveis.",
     "PROJ_SOCIAL_EDA_RESULT": "Identificação de causas raiz de quedas de engajamento e recomendações data-driven.",
@@ -78,7 +77,6 @@
     "PROJ_SOCIAL_EDA_IMAGE": "/projects/data_claening.png",
     "PROJ_SOCIAL_EDA_DEMO": "https://www.kaggle.com/code/ivanedasdsada/social-media-exploratory-analisis",
     "PROJ_SOCIAL_EDA_REPO": "https://www.kaggle.com/code/ivanedasdsada/social-media-exploratory-analisis",
-
     "PROJ_LAW_FIRM_TITLE": "Sistema de Gestão Jurídica",
     "PROJ_LAW_FIRM_DESC": "O escritório jurídico precisava modernizar sua gestão de casos e clientes, transitando de processos manuais para um ambiente digital rápido e seguro. Criei uma aplicação web intuitiva onde os advogados podiam acessar informações instantaneamente, com um sistema de rotas claro para navegação fluida. O resultado se alinhou com as expectativas: um design de UI/UX profissional que transmitia confiança e uma arquitetura técnica robusta capaz de lidar com bancos de dados eficientemente. Inclui autenticação de usuários, rotas protegidas, listagem de serviços do banco de dados e envio de e-mails de contato.",
     "PROJ_LAW_FIRM_RESULT": "Sistema funcional com autenticação, rotas protegidas e integração de banco de dados.",
@@ -86,7 +84,6 @@
     "PROJ_LAW_FIRM_IMAGE": "/projects/law_firm.png",
     "PROJ_LAW_FIRM_DEMO": "https://proyecto-abogado.vercel.app/",
     "PROJ_LAW_FIRM_REPO": "https://github.com/idmr023/ProyectoAbogado",
-
     "PROJ_LICITABIEN_TITLE": "LicitaBien — Licitações Descentralizadas",
     "PROJ_LICITABIEN_PROBLEM": "As licitações públicas no Peru enfrentam vazamento de propostas, conluio e manipulação na adjudicação de contratos, prejudicando MYPES e entidades que competem em igualdade de condições.",
     "PROJ_LICITABIEN_DESC": "Plataforma descentralizada de licitações públicas e adjudicação de contratos para MYPES e entidades peruanas sobre Arbitrum Sepolia, projetada para blindar os processos de licitação e factoring: propostas seladas on-chain via BlindBidVault (Commit-Reveal) que impedem vazamentos, conluio e manipulação; avaliação automatizada por IA com OpenRouter / Llama 3.1 Nemotron que produz um aiScore de qualidade (0-100); e credenciais EAS (Ethereum Attestation Service) para atestações on-chain de reputação e adjudicação. MVP construído como parte do EthLima Hackathon 2026.",
@@ -95,7 +92,6 @@
     "PROJ_LICITABIEN_IMAGE": "/projects/eth_hackhaton.png",
     "PROJ_LICITABIEN_DEMO": "https://eth-hackathon-2026-ethdevelopers.vercel.app/",
     "PROJ_LICITABIEN_REPO": "#",
-
     "PROJ_APP_PASOS_TITLE": "App Pasos — Desafios, Academia e Coach IA",
     "PROJ_APP_PASOS_PROBLEM": "Os desafios de passos e os treinos de academia geralmente vivem em apps separados, sem gamificação, acompanhamento diário nem um coach que personalize a experiência.",
     "PROJ_APP_PASOS_DESC": "Aplicativo móvel de desafios de passos e academia com gamificação completa: registro diário de passos em desafios contra amigos com código de convite (6 caracteres), calendário mensal e estatísticas semanais/mensais com gráfico de barras; sistema de XP e níveis (1 XP a cada 10 passos, fórmula 1000 × L × (L+1) / 2) com recompensas a cada 10 níveis (Caminante, Maratonista, Ultramaratonista, Leyenda, Titán); módulo de academia com 1.327+ exercícios da API WorkoutX com GIFs em 4 categorias, rotinas passo a passo e timer real baseado em DateTime.now(); Coach IA integrado com Gemini via backend Express e RAG sobre MongoDB com memória persistente de conversas; e conquistas de peso automáticas (25-200 kg).",
@@ -104,28 +100,21 @@
     "PROJ_APP_PASOS_IMAGE": "/projects/app_pasos.jpg",
     "PROJ_APP_PASOS_DEMO": "#",
     "PROJ_APP_PASOS_REPO": "#",
-
     "PROJ_RIPNEL_PROBLEM": "Empresa têxtil dependia de processos manuais e em papel para inventário, transferências e vendas, gerando ineficiências e discrepâncias.",
     "PROJ_COMMERCIAL_BI_PROBLEM": "Necessidade de transformar dados comerciais brutos em um dashboard interativo para decisão ágil.",
     "PROJ_CX_METRICS_PROBLEM": "Geração manual de relatórios CX lenta, dificultando o acompanhamento de FCR, CSAT e tempos de resolução.",
     "PROJ_SOCIAL_EDA_PROBLEM": "Quedas históricas no engajamento de redes sociais sem causa raiz identificada.",
     "PROJ_LAW_FIRM_PROBLEM": "Escritório jurídico com gestão manual de casos e clientes, processos lentos e inseguros.",
-
     "SKILLS_TITLE": "Habilidades & Tecnologias",
     "SKILLS_SUBTITLE": "Stack técnica e competências interpessoais",
-
     "SKILLS_FRONTEND_TITLE": "Frontend Development",
     "SKILLS_FRONTEND_ITEMS": "React | Next.js | TypeScript | Astro | Tailwind CSS | HTML5 | CSS3 | JavaScript (ES6+) | Bootstrap",
-
     "SKILLS_DATA_TITLE": "Data & IA",
     "SKILLS_DATA_ITEMS": "Python | SQL | Tableau | Power BI | Pandas | NumPy | Jupyter | ETL | Data Cleaning | IA Generativa",
-
     "SKILLS_SOFT_TITLE": "Soft Skills & Liderança",
     "SKILLS_SOFT_ITEMS": "Liderança de Equipes | Inteligência Emocional | Resolução de Problemas | Comunicação Trilíngue | Gestão do Tempo | Metodologias Ágeis | Mentoria | Adaptabilidade",
-
     "SKILLS_TOOLS_TITLE": "Ferramentas & Infra",
-    "SKILLS_TOOLS_ITEMS": "Git | GitHub | Supabase | Vercel | Figma | Trello | Excel Avançado | VS Code | Docker",
-
+    "SKILLS_TOOLS_ITEMS": "Git | GitHub | GitHub Actions | Node.js | Express | Prisma | Supabase | Vercel | Render | Playwright | Docker | Figma | Excel Avançado",
     "SKILLS_MAP_TITLE": "Habilidades & Tecnologias",
     "SKILLS_MAP_SUBTITLE": "Constelações de ferramentas técnicas e estrelas de habilidades suaves forjadas em cenários reais. Explore cada nó.",
     "SKILLS_MAP_HINT": "Passe o cursor sobre cada estrela · Clique no cenário para saber mais",
@@ -146,70 +135,52 @@
     "PROJECTS_LABEL_DEMO": "Demo ao Vivo",
     "PROJECTS_LABEL_REPO": "Repositório",
     "PROJECTS_LABEL_FEATURED": "Destaque",
-
     "SKILL_1_NAME": "Liderança Adaptativa",
     "SKILL_1_SCENARIO": "Promoção a Tier 4 na Teleperformance e Caso Grupal Impulsa UTP",
     "SKILL_1_DESC": "Tornei-me o primeiro agente Tier 3 Trilíngue de Lima liderando métricas, assumindo responsabilidades estratégicas como Tier 4. No Assessment Center do Programa Impulsa, propus soluções críticas ganhando o respeito técnico da minha equipe.",
-
     "SKILL_2_NAME": "Gestão do Tempo sob Pressão",
     "SKILL_2_SCENARIO": "Assessment Center Impulsa UTP (Desafio de 7 minutos)",
     "SKILL_2_DESC": "Fui o primeiro a entregar um vídeo de apresentação respeitando o limite estrito de 7 minutos. Aprendi a priorizar o cumprimento de objetivos e a eficiência operacional acima do perfeccionismo desnecessário.",
-
     "SKILL_3_NAME": "Autenticidade e Conexão Interpessoal",
     "SKILL_3_SCENARIO": "Curso de Clown e Networking Universitário",
     "SKILL_3_DESC": "Trabalho ativamente em quebrar o gelo e superar a timidez. Através de dinâmicas de vulnerabilidade nas minhas aulas de Clown e 'Set-Shifting' mental em eventos de networking, aprendo a soltar o controle e me mostrar mais natural e comunicativo.",
-
     "SKILL_4_NAME": "Resiliência e Disciplina Estratégica",
     "SKILL_4_SCENARIO": "Reabilitação de joelho e Treino Marcona 35K",
     "SKILL_4_DESC": "Após uma forte lesão de menisco, troquei a frustração por disciplina, fazendo o 'trabalho chato' de terapia para me recuperar e estabelecer uma nova meta épica: correr 35km em Marcona. Esta resiliência me permite enfrentar bugs e desafios com paciência.",
-
     "SKILL_5_NAME": "Autogestão e Resolução de Problemas",
-    "SKILL_5_SCENARIO": "Desenvolvimento do SaaS Ripnel",
-    "SKILL_5_DESC": "Cultivei uma mentalidade empreendedora ao assumir o desenvolvimento do Ripnel do zero. Aprendi a pesquisar novas tecnologias de forma autônoma, otimizar meu código e gerenciar um projeto completo sem supervisão direta.",
-
+    "SKILL_5_SCENARIO": "Monorepo e ERP na Greenline",
+    "SKILL_5_DESC": "Assumi o desenvolvimento do site público e do ERP da Greenline de ponta a ponta: frontend, API, autenticação avançada e CI/CD. Aprendi a pesquisar novas tecnologias de forma autônoma e a gerenciar um projeto completo com critério próprio.",
     "SKILL_6_NAME": "Flexibilidade Cognitiva e Regulação Emocional",
     "SKILL_6_SCENARIO": "Ferramenta SPEA e Desenvolvimento Pessoal",
     "SKILL_6_DESC": "Através do autoconhecimento, terapia e leituras de psicologia, aprendo a gerenciar a dissonância cognitiva e regular minhas emoções. Uso frameworks como o canvas SPEA para entender minhas reações ao estresse.",
-
     "SKILL_7_NAME": "Gestão da Pressão e Organização",
     "SKILL_7_SCENARIO": "Suporte Bilíngue (Teleperformance) e Impulsa UTP",
-    "SKILL_7_DESC": "Resolvi mais de 1.900 casos reduzindo tempos de resolução em 25% e mantendo 80% de satisfação do cliente. Esta capacidade organizativa sob estresse também me permitiu destacar no Assessment Center do Impulsa.",
-
+    "SKILL_7_DESC": "Resolvi mais de 1.200 consultas, reduzindo os tempos de resolução em 25% e mantendo 80% de satisfação do cliente. Essa capacidade de organização sob estresse me fez destacar no Assessment Center do Impulsa.",
     "SKILL_8_NAME": "Trabalho em Equipe e Adaptabilidade",
     "SKILL_8_SCENARIO": "Experiência Operativa no Chinawok",
     "SKILL_8_DESC": "Minha passagem pelo Chinawok representou minha primeira grande escola sobre dinâmica de equipe. Em um ambiente acelerado e de alta exigência, desenvolvi minha capacidade para resolver conflitos, comunicar-me efetivamente e manter o ritmo durante horas de pico.",
-
     "EDUCATION_TITLE": "Formação & Conquistas",
-    "EDUCATION_UTP_TITLE": "Engenharia de Software, UTP",
-    "EDUCATION_UTP_DESC": "Tercio Superior. Selecionado para o programa de talentos diretivos Impulsa UTP.",
-    "EDUCATION_UTP_STATUS": "Formado",
-
+    "EDUCATION_UTP_TITLE": "Bacharel em Engenharia de Software, UTP",
+    "EDUCATION_UTP_DESC": "Março 2021 – Julho 2026. Terço Superior. Selecionado para o programa de talentos executivos Impulsa UTP.",
+    "EDUCATION_UTP_STATUS": "Bacharel",
     "EDUCATION_IMPULSA_TITLE": "Programa Impulsa UTP",
     "EDUCATION_IMPULSA_DESC": "Programa de talentos diretivos com foco em liderança, inovação e visão estratégica de negócios.",
-    "EDUCATION_IMPULSA_STATUS": "Formado",
-
+    "EDUCATION_IMPULSA_STATUS": "Julho 2026 - Novembro 2026",
     "EDUCATION_ITB_TITLE": "IT for Banking — UTP e Interbank",
     "EDUCATION_ITB_DESC": "Selecionado para o curso de IT for Banking em aliança com o Interbank, especializado em tecnologia e transformação digital do setor bancário.",
-    "EDUCATION_ITB_STATUS": "Agosto 2026 - atualidade",
-
+    "EDUCATION_ITB_STATUS": "Agosto 2026 - Outubro 2026",
     "EDUCATION_ETH_TITLE": "EthLima Hackathon 2026",
     "EDUCATION_ETH_DESC": "Desenvolvedor Web3 no Hackathon Ethereum Lima 2026. Criei o LicitaBien, MVP SaaS B2B em Arbitrum para licitações transparentes mediante Smart Contracts e Inteligência Artificial.",
     "EDUCATION_ETH_STATUS": "2026",
-
     "CERTIFICATIONS_TITLE": "Certificações",
-
     "CERT_SCRUM_TITLE": "SCRUM Fundamentals, 2026",
     "CERT_SCRUM_DESC": "Certificação que valida minha capacidade de desenvolver e gerenciar projetos tecnológicos sob a metodologia ágil SCRUM.",
-
     "CERT_GOOGLE_TITLE": "Google Data Analytics Professional Certificate, Coursera, 2024",
     "CERT_GOOGLE_DESC": "Domínio de SQL, análise de dados em Python e visualização com Tableau para tomada de decisões.",
-
     "CERT_ORACLE_TITLE": "Programa Oracle Next Education Front-end, 2023",
     "CERT_ORACLE_DESC": "Desenvolvimento de aplicações web com HTML, CSS, JavaScript e React.",
-
     "CERT_IBM_TITLE": "IBM Generative AI Engineering, 2025",
     "CERT_IBM_DESC": "Aperfeiçoando o manejo da IA Generativa: desde a compreensão de suas bases e benefícios, até sua aplicação real para criar soluções de excelência.",
-
     "RUNNING_TITLE": "Mentalidade Runner",
     "RUNNING_QUOTE": "\"Cada quilômetro é uma iteração. Cada prova é um deploy. O impossível é só uma questão de cadência.\"",
     "RUNNING_DESC": "Preparação para corrida de 35km no deserto de Marcona. Largada às 3AM. Em busca da Medalha da Inspiração.",
@@ -219,31 +190,24 @@
     "RUNNING_LABEL_2": "Deserto percorrido",
     "RUNNING_STATS_3": "3AM",
     "RUNNING_LABEL_3": "Largada noturna",
-
     "CONTACT_TITLE": "Vamos construir algo juntos?",
-    "CONTACT_SUBTITLE": "Se você busca um profissional que combina excelência técnica com uma mentalidade de alto desempenho, está no lugar certo. Estou aberto a oportunidades como Desenvolvedor Frontend, Data Analyst ou posições híbridas onde tecnologia e dados se encontram.",
+    "CONTACT_SUBTITLE": "Se você procura um profissional que une excelência técnica a uma mentalidade de alto desempenho, está no lugar certo. Estou aberto a oportunidades como Desenvolvedor Web Full-Stack, Frontend, Data Analyst ou posições híbridas onde tecnologia e dados se encontram.",
     "CONTACT_CTA_PRIMARY": "Fale Comigo",
     "CONTACT_CTA_SECONDARY": "Baixar CV",
-    "CONTACT_EMAIL": "ivanmanrique@email.com",
-
+    "CONTACT_EMAIL": "idmr_02@outlook.com",
     "FOOTER_TEXT": "Desenvolvido com disciplina por Ivan Manrique",
     "FOOTER_RIGHTS": "Todos os direitos reservados.",
-
     "SMB_LINKEDIN": "Conecte-se comigo no LinkedIn",
     "SMB_GITHUB": "Veja meus projetos no GitHub",
     "SMB_CV": "Baixar Currículo",
-
     "CHATBOT_TITLE": "Chat com Ivan",
     "CHATBOT_SUBTITLE": "Tire suas dúvidas sobre minha experiência, habilidades e projetos.",
     "CHATBOT_PLACEHOLDER": "Pergunte sobre minha experiência, skills ou projetos...",
     "CHATBOT_WELCOME": "Olá! Sou o assistente virtual do Ivan. Posso te ajudar com informações sobre experiência profissional, habilidades técnicas, formação acadêmica ou projetos. O que você gostaria de saber?",
-
     "SEARCH_PLACEHOLDER": "Pesquisar no portfólio...",
     "SEARCH_EMPTY": "Nenhum resultado encontrado.",
     "SEARCH_HINT": "Pressione Ctrl+K para buscar",
-
     "NOTFOUND_404": "404, Página não encontrada",
-
     "PROJECTS_VIEW_ALL": "Ver todos os projetos",
     "PROJECTS_SNEAK_PEEK": "Uma olhada no meu trabalho"
 }

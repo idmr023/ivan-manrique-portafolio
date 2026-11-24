@@ -71,7 +71,8 @@ export default function ExperienceShell({ locale, i18n, projects, checkpoints, p
           if (run.section === id) continue;
           run.section = id;
           run.accent = ACCENTS[id] ?? 0x38bdf8;
-          run.warpTarget = id === 'skills' ? 1 : 0;
+          // partial warp: streaks stay behind the galaxy without drowning its labels
+          run.warpTarget = id === 'skills' ? 0.55 : 0;
           emit('section', id);
         }
       },
@@ -92,7 +93,6 @@ export default function ExperienceShell({ locale, i18n, projects, checkpoints, p
       <Scene3D />
       <div aria-hidden="true" className="fx-vignette" />
       <div aria-hidden="true" className="fx-scanlines" />
-      <div aria-hidden="true" className="fx-noise" />
       <BootLoader ui={ui} />
       <RunHUD
         ui={ui}

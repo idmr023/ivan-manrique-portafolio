@@ -10,14 +10,14 @@ interface FooterProps {
 
 export default function Footer({ i18n, langPrefix }: FooterProps) {
   return (
-    <footer className="relative z-10 border-t border-sky-400/10 bg-[#07070b]/80 backdrop-blur py-10 px-4 sm:px-6 pb-24 lg:pb-10">
+    <footer className="relative z-10 border-t border-sky-400/10 bg-[#07070b]/95 py-10 px-4 sm:px-6 pb-24 lg:pb-10">
       <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
         <div className="text-center sm:text-left">
           <a
             href={langPrefix || '/'}
             className="text-white font-display font-bold text-lg no-underline"
           >
-            <span className="text-sky-400">&lt;</span>IM<span className="text-sky-400">/&gt;</span>
+            <span className="text-sky-400">&lt;</span>IDMR<span className="text-sky-400">/&gt;</span>
           </a>
           <p className="text-slate-600 text-xs mt-1 font-mono">
             {i18n.FOOTER_TEXT} &copy; {new Date().getFullYear()}

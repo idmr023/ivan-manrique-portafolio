@@ -87,12 +87,14 @@ export default function RunHUD({ ui, locale, checkpoints, projectsHref, projects
     const ecg: number[] = new Array(40).fill(10);
     let phase = 0;
     let lastClock = '';
+    let frame = 0;
     const loop = () => {
       raf = requestAnimationFrame(loop);
+      if (++frame % 3 !== 0) return;
       const v = Math.min(1, Math.abs(run.velocity) / 40);
-      speedN += (v - speedN) * 0.05;
+      speedN += (v - speedN) * 0.14;
       const targetBpm = 64 + speedN * 112 + run.progress * 18;
-      bpm += (targetBpm - bpm) * 0.02;
+      bpm += (targetBpm - bpm) * 0.06;
       const pace = 450 - speedN * 255; // 7'30" → 3'15"
 
       if (distRef.current) distRef.current.textContent = (run.progress * RACE_KM).toFixed(2);
@@ -102,7 +104,7 @@ export default function RunHUD({ ui, locale, checkpoints, projectsHref, projects
       if (railRef.current) railRef.current.style.transform = `scaleY(${run.progress})`;
 
       // ECG line
-      phase += bpm / 60 / 60;
+      phase += bpm / 60 / 20;
       if (phase >= 1) phase -= 1;
       const beat = phase < 0.06 ? -8 : phase < 0.1 ? 9 : phase < 0.14 ? -3 : 0;
       ecg.shift();

@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
 import { Download, ArrowDown, Terminal } from 'lucide-react';
-import { CV_URL } from '@/lib/constants';
+import { CV_URL, CV_FILENAME } from '@/lib/constants';
 import { run, on, emit, scrollToId } from '@/lib/run-store';
 import Magnetic from '@/components/experience/Magnetic';
 import ScrambleText from '@/components/experience/ScrambleText';
@@ -150,7 +150,7 @@ export default function Hero({ i18n, ui, projectCount }: HeroProps) {
                 </button>
               </Magnetic>
               <Magnetic>
-                <a href={CV_URL} target="_blank" rel="noopener noreferrer" className="btn-ghost" data-cursor="CV">
+                <a href={CV_URL} download={CV_FILENAME} className="btn-ghost" data-cursor="CV">
                   <Download size={16} />
                   {i18n.HERO_CTA_SECONDARY}
                 </a>
@@ -168,7 +168,7 @@ export default function Hero({ i18n, ui, projectCount }: HeroProps) {
           <div className="grid grid-cols-3 gap-2 sm:gap-3">
             {[
               { v: projectCount, s: '', l: ui.projectsCount, c: 'text-sky-300' },
-              { v: 1900, s: '+', l: ui.casesCount, c: 'text-neon-400' },
+              { v: 1200, s: '+', l: ui.casesCount, c: 'text-neon-400' },
               { v: 35, s: 'K', l: ui.raceCount, c: 'text-amber-300' },
             ].map((m, i) => (
               <div key={i} className="stat-tile" data-cursor="">

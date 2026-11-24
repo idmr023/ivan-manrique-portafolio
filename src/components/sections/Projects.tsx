@@ -31,7 +31,7 @@ const projectCategories: Record<string, CategoryConfig> = {
   portafolios: {
     label: '(Portafolios)',
     color: '#38bdf8',
-    ids: ['law-firm', 'cosmetologia-yvette'],
+    ids: ['cosmetologia-yvette'],
   },
   businessManagement: {
     label: '(Sistemas de Gestión Comercial)',

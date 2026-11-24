@@ -3,7 +3,7 @@
 import { useCallback, useEffect, useRef, useState, type ReactNode } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { on, emit, run, scrollToId } from '@/lib/run-store';
-import { CV_URL, EMAIL, GITHUB_URL, LINKEDIN_URL } from '@/lib/constants';
+import { CV_URL, CV_FILENAME, EMAIL, GITHUB_URL, LINKEDIN_URL } from '@/lib/constants';
 import type { Locale } from '@/i18n';
 import type { UIStrings } from '@/i18n/ui';
 import type { Project } from '@/lib/data';
@@ -129,8 +129,13 @@ export default function CommandTerminal({ ui, i18n, locale, projects, sections }
           break;
         case 'cv':
         case 'resume':
-          push('ok', '→ opening resume...');
-          window.open(CV_URL, '_blank', 'noopener');
+          push('ok', `→ downloading ${CV_FILENAME}...`);
+          {
+            const a = document.createElement('a');
+            a.href = CV_URL;
+            a.download = CV_FILENAME;
+            a.click();
+          }
           break;
         case 'email':
           navigator.clipboard?.writeText(EMAIL).then(
@@ -240,7 +245,7 @@ export default function CommandTerminal({ ui, i18n, locale, projects, sections }
     <AnimatePresence>
       {open && (
         <motion.div
-          className="fixed inset-0 z-[150] flex items-start sm:items-center justify-center p-3 sm:p-6 bg-black/60 backdrop-blur-sm"
+          className="fixed inset-0 z-[150] flex items-start sm:items-center justify-center p-3 sm:p-6 bg-black/80"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}

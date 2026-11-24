@@ -17,7 +17,12 @@ function hash(s: string) {
 }
 
 function slug(role: string) {
-  return role.split(',').pop()!.trim().toLowerCase().replace(/[^a-z0-9]+/g, '-');
+  const company = role.split(',').pop()!.trim().split(/\s+/).pop()!;
+  return company
+    .normalize('NFD')
+    .replace(/[̀-ͯ]/g, '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-');
 }
 
 export default function Experience({ i18n, experience }: ExperienceProps) {
@@ -93,6 +98,21 @@ export default function Experience({ i18n, experience }: ExperienceProps) {
                 <span className="text-slate-500">Date: </span>
                 {exp.period}
               </div>
+              {exp.url && (
+                <div className="text-xs mt-1">
+                  <span className="text-slate-500">Live: </span>
+                  <a
+                    href={exp.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    data-cursor="LIVE"
+                    className="inline-flex items-center gap-1.5 text-emerald-300 underline underline-offset-4 decoration-emerald-400/40 hover:text-white hover:decoration-white transition-colors"
+                  >
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" aria-hidden="true" />
+                    {exp.url.replace(/^https?:\/\//, '').replace(/\/$/, '')} ↗
+                  </a>
+                </div>
+              )}
             </motion.div>
           )}
 

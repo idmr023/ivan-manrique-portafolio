@@ -28,7 +28,8 @@ export default function Scene3D() {
     } catch {
       return; // no WebGL: CSS background stays visible
     }
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio, lowPower ? 1 : 1.5));
+    let pixelRatio = Math.min(window.devicePixelRatio, lowPower ? 0.85 : 1);
+    renderer.setPixelRatio(pixelRatio);
     renderer.setSize(window.innerWidth, window.innerHeight);
     renderer.setClearColor(0x000000, 0);
     mount.appendChild(renderer.domElement);
@@ -40,7 +41,7 @@ export default function Scene3D() {
     camera.position.set(0, 2.4, 8);
 
     /* ---------------- Grid floor + dunes ---------------- */
-    const floorGeo = new THREE.PlaneGeometry(120, 160, lowPower ? 60 : 120, lowPower ? 80 : 160);
+    const floorGeo = new THREE.PlaneGeometry(120, 160, lowPower ? 50 : 80, lowPower ? 70 : 110);
     floorGeo.rotateX(-Math.PI / 2);
     floorGeo.translate(0, 0, -60);
 
@@ -161,7 +162,7 @@ export default function Scene3D() {
     });
 
     /* ---------------- Speed streaks / hyperspace ---------------- */
-    const STREAKS = lowPower ? 220 : 520;
+    const STREAKS = lowPower ? 140 : 300;
     const streakPos = new Float32Array(STREAKS * 6);
     const streakData: { x: number; y: number; z: number; s: number }[] = [];
     const spawnStreak = (i: number, randomZ: boolean) => {
@@ -201,11 +202,27 @@ export default function Scene3D() {
     let camY = 2.4;
     let raf = 0;
     let visible = true;
+    // adaptive quality: if frames run long, render at a lower resolution
+    let slowFrames = 0;
+    let sampled = 0;
 
     const tick = () => {
       raf = requestAnimationFrame(tick);
       if (!visible) return;
-      const dt = Math.min(clock.getDelta(), 0.05);
+      const rawDt = clock.getDelta();
+      const dt = Math.min(rawDt, 0.05);
+      if (run.booted && pixelRatio > 0.6) {
+        sampled++;
+        if (rawDt > 0.024) slowFrames++;
+        if (sampled >= 90) {
+          if (slowFrames > 30) {
+            pixelRatio = Math.max(0.6, pixelRatio - 0.2);
+            renderer.setPixelRatio(pixelRatio);
+          }
+          sampled = 0;
+          slowFrames = 0;
+        }
+      }
       const t = clock.elapsedTime;
       const f = dt * 60;
 
@@ -214,13 +231,14 @@ export default function Scene3D() {
       speed += (target - speed) * 0.06 * f;
       run.warp += (run.warpTarget - run.warp) * 0.04 * f;
       const warp = run.warp;
+      const hide = Math.min(1, warp * 1.8); // scenery fades out faster than streaks grow
 
       offset += speed * f * 0.6 * (1 + warp * 2);
       floorMat.uniforms.uOffset.value = offset;
-      floorMat.uniforms.uOpacity.value = 1 - warp * 0.92;
+      floorMat.uniforms.uOpacity.value = 1 - hide * 0.8;
       floorMat.uniforms.uTime.value = t;
       moonMat.uniforms.uTime.value = t;
-      moonMat.uniforms.uOpacity.value = 1 - warp * 0.85;
+      moonMat.uniforms.uOpacity.value = 1 - hide;
 
       // accent colour per section
       tmpColor.setHex(run.accent);
@@ -251,7 +269,7 @@ export default function Scene3D() {
         m.position.y = u.base.y + Math.sin(t * 0.6 + u.phase) * 0.6 + run.mouseY * 0.6;
         m.position.z = u.base.z + run.progress * 6;
         const mat = m.material as THREE.MeshBasicMaterial;
-        mat.opacity = 0.32 * (1 - warp * 0.7);
+        mat.opacity = 0.32 * (1 - hide * 0.9);
         const s = 1 + warp * 0.4;
         m.scale.setScalar(s);
       }
